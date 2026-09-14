@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourite Books | Quotes That Matter</title>
+    <meta name="description" content="Explore our favourite books on stoic, relationship, leadership and more. There is book for every topics. Read them and add them into your collections. They might change your perspective.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Favourite Books | Quotes That Matter">
+    <meta property="og:description" content="Explore our favourite books on stoic, relationship, leadership and more. There is book for every topics. Read them and add them into your collections. They might change your perspective.">
+    <meta property="og:url" content="https://quotesthatmatter.com/books/index.html">
+    <meta property="og:site_name" content="Quotes That Matter">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap" rel="stylesheet">
+
+    <style>
+          :root {
+            --bg-color: #FDFBF4;
+            --primary-color: #E67E43;
+            --text-dark: #000000;
+            --accent-muted: #6a6b64;
+            --card-bg: #FFFFFF;
+            --border-soft: #F3EFE3;
+            --text-body: #000000;
+			--author-card: #a23715;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            font-family: 'Libertinus Math', Georgia, serif;
+            font-size: 1.25rem; /* Upgraded root sizing for Cormorant */
+            line-height: 1.7;
+            padding: 0 1rem 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ---- HEADER ---- */
+        .container { max-width: 800px; }
+
+        header {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            margin-bottom: 1rem;
+            background-color: #F5E7D5;
+        }
+
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+        }
+
+        header a.logo-link {
+            text-decoration: none;
+            display: block;
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        .logo-sub {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0.1rem;
+        }
+
+        .header-sep {
+            width: 1px;
+            height: 2.6rem;
+            background-color: rgba(51,34,26,0.15);
+            flex-shrink: 0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+        nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            padding: 0.6rem 0.95rem;
+            border-radius: 8px;
+            background-color: rgba(230,126,67,0.08);
+            transition: background-color 0.15s ease, color 0.15s ease;
+        }
+        nav a:hover, nav a.active { background-color: rgba(230,126,67,0.16); color: var(--primary-color); }
+        nav a.image-gen {
+            color: #fff;
+            background-color: var(--primary-color);
+        }
+        nav a.image-gen:hover { background-color: var(--primary-color); opacity: 0.88; }
+
+        /* ---- PAGE INTRO ---- */
+        .page-intro {
+            margin-bottom: 1.25rem;
+        }
+
+        .breadcrumb {
+            font-size: 0.75rem;
+            color: var(--accent-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+        }
+
+        .breadcrumb a {
+            color: var(--accent-muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary-color);
+        }
+
+        .page-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--text-dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .page-desc {
+
+
+            line-height: 1.6;
+        }
+		
+        /* ---- RAW LINK COLUMNS (Authors / Topics) ---- */
+        .link-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2.5rem;
+            margin-bottom: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .link-col-title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: none;
+            letter-spacing: 0.2px;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .link-list { list-style: none; }
+        .link-list li { border-bottom: 1px dotted var(--border-soft); }
+        .link-list a {
+            display: block;
+            padding: 0.2rem 0;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 500;
+        }
+        .link-list a:hover { color: var(--primary-color); text-decoration: underline; }
+        .link-list a.more-link { color: var(--primary-color); font-weight: 600; }
+
+        /* ---- BOOK LINK LIST (small inline thumbnails) ---- */
+        .book-link-list li { border-bottom: 1px dotted var(--border-soft); }
+        .book-link-list a {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+    
+            text-decoration: none;
+        }
+        .book-link-list a:hover .book-title-sm { color: var(--primary-color); text-decoration: underline; }
+        .book-thumb-sm {
+            width: 48px;
+            height: 48px;
+			margin: 1rem 0;
+            flex-shrink: 0;
+            background: #F5E7D5;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.5rem;
+            color: var(--accent-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px dashed rgba(51,34,26,0.15);
+        }
+        .book-title-sm {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        @media (max-width: 600px) {
+            .link-columns { grid-template-columns: 1fr; gap: 1.5rem; }
+        }
+
+        /* ---- HASHTAG CTA ---- */
+        .hashtag-cta {
+            text-align: center;
+            padding: 2.5rem 1rem;
+            border-top: 1px solid var(--border-soft);
+            margin-bottom: 2rem;
+        }
+
+        .hashtag-cta p {
+            font-size: 1.25rem;
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+        .hashtag-cta a { text-decoration: none;}
+        .hashtag-cta .hashtag { color: var(--primary-color); font-weight: 600; }
+		
+	  /* ---- FOOTER ---- */
+        footer {
+            text-align: center;
+            
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-soft);
+            font-family: 'Libertinus Math', sans-serif;
+            font-size: 0.82rem;
+            color: var(--accent-muted);
+            letter-spacing: 0.5px;
+        }
+		
+		footer a {
+		text-decoration: none;
+		    color: var(--primary-color)
+		}
+
+		footer p { margin-bottom: 0.5rem; }
+		footer p:last-child { margin-bottom: 0; }
+
+		.footer-links a { margin: 0 0.2rem; }
+		.footer-links .sep { color: var(--accent-muted); margin: 0 0.3rem; }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 600px) {
+            .logo-main { font-size: 3rem; }
+            .author-grid { gap: 0.6rem 1rem; }
+            nav a { font-size: 0.7rem; }
+            nav span.sep { margin: 0 0.35rem; }
+        }
+
+        @media (max-width: 400px) {
+            .author-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo-link">
+                <span class="logo-main">Quotes</span>
+                <div class="logo-sub">That Matter</div>
+            </a>
+            <div class="header-sep"></div>
+            <nav aria-label="Main navigation">
+                <a href="/author/index.html">Authors</a>
+                <a href="/topics/index.html">Topics</a>
+                <a href="/books/index.html">Books</a>
+                <a href="/articles/">Articles</a>
+                <a href="/quote-maker/index.html" class="image-gen">Quote Maker</a>
+            </nav>
+        </div>
+    </header>
+
+        <main>
+            <div class="page-intro">
+                <div class="breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp;<a href="/topics/index.html"> Topics</a> &nbsp;/&nbsp; Favourite Books </div>
+                <h1 class="page-title">Favourite Books</h1>
+            </div>
+ <p class="page-desc">Explore our favourite books collection by topic.
+If you want to share quotes on your social media, create a beautiful quote image instantly using our <a href="/quote-maker/index.html" target="_blank" style="text-decoration:none; color:var(--author-card);">Quote Image Generator</a> and upload to your social media in seconds!</p><br>
+
+
+    <div class="link-columns">
+        <div class="link-col">
+            <div class="link-col-title">Explore Books</div>
+            <ul class="link-list book-link-list">
+                <li><a href="https://amzn.to/4bQ8oNv" target="_blank" rel="noopener sponsored nofollow"><div class="book-thumb-sm"><img src="/img/books/meditations2.webp"></div><span class="book-title-sm">Meditations</span></a></li>
+                <li><a href="https://amzn.to/3Suo9mC" target="_blank" rel="noopener sponsored nofollow"><div class="book-thumb-sm"><img src="/img/books/letterfromstoic1.webp"></div><span class="book-title-sm">Letters from a Stoic</span></a></li>
+
+
+            </ul>
+        </div>
+        <div class="link-col">
+            <div class="link-col-title">Explore Books</div>
+            <ul class="link-list book-link-list">
+                <li><a href="https://amzn.to/461Q4gR" target="_blank" rel="noopener sponsored nofollow"><div class="book-thumb-sm"><img src="/img/books/shortnesslife1.webp"></div><span class="book-title-sm">On the Shortness of Life</span></a></li>
+
+
+            </ul>
+        </div>
+        <div class="link-col">
+            <div class="link-col-title">Explore Books</div>
+            <ul class="link-list book-link-list">
+                <li><a href="https://amzn.to/4fX6c9j" target="_blank" rel="noopener sponsored nofollow"><div class="book-thumb-sm"><img src="/img/books/enchiridion1.webp"></div><span class="book-title-sm">Enchiridion</span></a></li>
+                <li><a href="https://amzn.to/4ianRvv" target="_blank" rel="noopener sponsored nofollow"><div class="book-thumb-sm"><img src="/img/books/mansearchingmeaning1.webp"></div><span class="book-title-sm">Man's Search for Meaning</span></a></li>
+
+            </ul>
+        </div>
+    </div>
+			
+			    <section class="hashtag-cta">
+        <p>Found a book that speaks to you?<br>
+        Download a beautifully styled quote card from the book using our <a href="https://quotesthatmatter.com/quote-maker/index.html" target="_blank" rel="noopener"><span class="hashtag">Quote Maker</span></a> and share it on Instagram, Pinterest, or TikTok.<br>
+        Share the timeless wisdom with the world and hope someone gets touched by it.<br>
+        Tag <a href="https://quotesthatmatter.com/" target="_blank" rel="noopener"><span class="hashtag">#QuotesThatMatter</span> </a> — let's make timeless wisdom trend.</p>
+    </section>
+	
+        </main>
+
+    <footer>
+        <p>&copy; 2026 QuotesThatMatter.com. All rights reserved.</p>
+        <p>Visit Our Sister site <a href="https://quotesmemo.com/" target="_blank" rel="noopener">QuotesMemo.com</a></p>
+        <p class="footer-links">
+            <a href="/about">About</a>
+            <span class="sep">·</span>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <span class="sep">·</span>
+            <a href="/disclaimer">Disclaimer</a>
+            <span class="sep">·</span>
+            <a href="/contact">Contact</a>
+        </p>
+    </footer>
+
+    </div>
+</body>
+</html>

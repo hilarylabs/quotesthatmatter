@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourite Authors | Quotes That Matter</title>
+    <meta name="description" content="Explore wisdom by favourite authors like Marcus Aurelius, Epictetus,Oscar Wilde, Steve Jobs and more because the right quote at the right time can change everything.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Favourite AuthorsQuotes | Quotes That Matter">
+    <meta property="og:description" content="Explore wisdom by favourite authors like Marcus Aurelius, Epictetus,Oscar Wilde, Steve Jobs and more because the right quote at the right time can change everything.">
+    <meta property="og:url" content="https://quotesthatmatter.com/author/index.html">
+    <meta property="og:site_name" content="Quotes That Matter">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #FDFBF4;
+            --primary-color: #E67E43;
+            --text-dark: #33221A;
+            --accent-muted: #6a6b64;
+            --card-bg: #FFFFFF;
+            --border-soft: #F3EFE3;
+            --intro-bg: #dedbd3;
+            --text-body: #4a3728;
+			--author-card: #a23715;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            font-family: 'Libertinus Math', Georgia, serif;
+            font-size: 1.25rem; /* Upgraded root sizing for Cormorant */
+            line-height: 1.7;
+            padding: 0 1rem 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* ---- HEADER ---- */
+        .container { max-width: 800px; }
+
+        header {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            margin-bottom: 1.5rem;
+            background-color: #F5E7D5;
+        }
+
+        .header-inner {
+            max-width: 832px;
+            margin: 0 auto;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+        }
+
+        header a.logo-link {
+            text-decoration: none;
+            display: block;
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        .logo-sub {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0.1rem;
+        }
+
+        .header-sep {
+            width: 1px;
+            height: 2.6rem;
+            background-color: rgba(51,34,26,0.15);
+            flex-shrink: 0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+        nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            padding: 0.6rem 0.95rem;
+            border-radius: 8px;
+            background-color: rgba(230,126,67,0.08);
+            transition: background-color 0.15s ease, color 0.15s ease;
+        }
+        nav a:hover, nav a.active { background-color: rgba(230,126,67,0.16); color: var(--primary-color); }
+        nav a.image-gen {
+            color: #fff;
+            background-color: var(--primary-color);
+        }
+        nav a.image-gen:hover { background-color: var(--primary-color); opacity: 0.88; }
+
+        /* HAMBURGER TOGGLE (mobile/tablet only) */
+        .nav-toggle {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            margin-left: auto;
+            background-color: rgba(0,0,0,0.12);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            flex-shrink: 0;
+            padding: 0;
+        }
+        .nav-toggle .bar {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: var(--text-dark);
+            border-radius: 2px;
+            position: relative;
+        }
+        .nav-toggle .bar::before,
+        .nav-toggle .bar::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 20px;
+            height: 2px;
+            background-color: var(--text-dark);
+            border-radius: 2px;
+        }
+        .nav-toggle .bar::before { top: -6px; }
+        .nav-toggle .bar::after { top: 6px; }
+
+        @media (max-width: 860px) {
+            .header-inner { position: relative; padding: 0.5rem 1rem; }
+            .header-sep { display: none; }
+            .nav-toggle { display: flex; }
+            nav {
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                width: 100%;
+                gap: 0.4rem;
+                padding: 0.75rem 0 1rem;
+            }
+            nav.nav-open { display: flex; }
+            nav a { width: 100%; }
+        }
+
+        /* ---- PAGE INTRO ---- */
+        .page-intro {
+            margin-bottom: 1.5rem;
+        }
+
+        .breadcrumb {
+            font-size: 0.75rem;
+            color: var(--accent-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+        }
+
+        .breadcrumb a {
+            color: var(--accent-muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary-color);
+        }
+
+        .page-title {
+            font-family: 'Libertinus Math', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--text-dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .page-desc {
+            line-height: 1.7;
+        }
+		
+        /* ---- QUOTE CARD ---- */
+        .quote-wrap {
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--primary-color);
+            border-radius: 6px;
+            box-shadow: 0 4px 20px rgba(51,34,26,0.03);
+            overflow: hidden;
+            margin-bottom: 0;
+			padding: 1rem;
+        }
+
+        .quote-body { padding: 2rem 2.2rem 1.2rem; position: relative; }
+
+        .quote-body::before {
+            content: "\201C";
+            position: absolute;
+            top: 0.4rem;
+            left: 1.3rem;
+            font-size: 4.5rem;
+            color: rgba(230,126,67,0.07);
+            font-family: 'Times New Roman', serif;
+            line-height: 1;
+        }
+
+        .quote-body p {
+
+            font-size: 1.35rem;
+            font-style: italic;
+            color: var(--text-dark);
+            line-height: 1.65;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 1rem;
+        }
+
+
+        /* ---- AUTHOR GRID ---- */
+        .author-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.1rem 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .author-card {
+            text-decoration: underline;
+            color: var(--author-card);
+            font-family: 'Libertinus Math', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            padding: 0.1rem 0.3rem;
+            transition: color 0.2s ease;
+        }
+
+        .author-card:hover {
+            color: var(--primary-color);
+        }
+
+        /* ---- HASHTAG CTA ---- */
+        .hashtag-cta {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            border-top: 1px solid var(--border-soft);
+        }
+
+        .hashtag-cta p {
+            font-size: 1.25rem;
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+         .hashtag-cta a {text-decoration: none;}
+        .hashtag-cta .hashtag { color: var(--primary-color); font-weight: 600; }
+
+        /* ---- FOOTER ---- */
+        footer {
+            text-align: center;
+            
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-soft);
+            font-family: 'Libertinus Math', sans-serif;
+            font-size: 0.82rem;
+            color: var(--accent-muted);
+            letter-spacing: 0.5px;
+        }
+		
+		footer a {
+		text-decoration: none;
+		    color: var(--primary-color)
+		}
+
+		footer p { margin-bottom: 0.5rem; }
+		footer p:last-child { margin-bottom: 0; }
+
+		.footer-links a { margin: 0 0.2rem; }
+		.footer-links .sep { color: var(--accent-muted); margin: 0 0.3rem; }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 600px) {
+            .logo-main { font-size: 3rem; }
+            .author-grid { gap: 0.6rem 1rem; }
+            nav a { font-size: 0.7rem; }
+            nav span.sep { margin: 0 0.35rem; }
+        }
+
+        @media (max-width: 400px) {
+            .author-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo-link">
+                <span class="logo-main">Quotes</span>
+                <div class="logo-sub">That Matter</div>
+            </a>
+            <div class="header-sep"></div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+                <span class="bar"></span>
+            </button>
+            <nav aria-label="Main navigation" id="mainNav">
+                <a href="/author/index.html">Authors</a>
+                <a href="/topics/index.html">Topics</a>
+                <a href="/books/index.html/">Books</a>
+                <a href="/articles/">Articles</a>
+                <a href="/quote-maker/index.html" class="image-gen">Quote Maker</a>
+            </nav>
+        </div>
+    </header>
+
+        <main>
+            <div class="page-intro">
+                <div class="breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp;<a href="/author/authors.html"> Authors</a></div>
+                <h1 class="page-title">Authors</h1>
+            </div>
+ <p class="page-desc">Explore wisdom by favourite authors like Marcus Aurelius, Epictetus,Oscar Wilde, Steve Jobs and more because the right quote at the right time can change everything.</p><br>
+ <p class="page-desc">Read a line from your favourite author and sit with it for a second longer than you normally would. It might change your perspectives.</p><br>
+
+<p>Explore wisdoms by author, create a beautiful quote image instantly using our <a href="/quote-maker/index.html" target="_blank" style="text-decoration:none; color:var(--author-card);">Quote Image Generator</a> and upload to your social media in seconds!</p><br>
+
+            <div class="author-grid">
+                <a href="/author/alexander-the-great.html" class="author-card">Alexander the Great</a>
+				<a href="/author/alain-de-botton.html" class="author-card">Alain de Botton</a>
+				<a href="/author/albert-einstein.html" class="author-card">Albert Einstein</a>
+				<a href="/author/buddha.html" class="author-card">Buddha</a>
+				<a href="/author/cicero.html" class="author-card">Cicero</a>		 
+                <a href="/author/marcus-aurelius.html" class="author-card">Marcus Aurelius</a>
+                <a href="/author/seneca.html" class="author-card">Seneca the Younger</a>
+                <a href="/author/epictetus.html" class="author-card">Epictetus</a>
+				<a href="/author/david-goggins.html" class="author-card">David Goggins</a>
+				<a href="/author/dale-carnegie.html" class="author-card">Dale Carnegie</a>
+				<a href="/author/finn-juhl.html" class="author-card">Finn Juhl</a>
+				<a href="/author/george-orwell.html" class="author-card">George Orwell</a>
+				<a href="/author/harry-s-truman.html" class="author-card">Harry S. Truman</a>
+				<a href="/author/henry-david-thoreau.html" class="author-card">Henry David Thoreau</a>
+				<a href="/author/jocko-willink.html" class="author-card">Jocko Willink</a>
+				<a href="/author/khalil-gibran.html" class="author-card">Kahlil Gibran</a>
+				<a href="/author/leonardo-da-vinci.html" class="author-card">Leonardo da Vinci</a>
+				<a href="/author/lorraine-toussaint.html" class="author-card">Lorraine Toussaint</a>
+				<a href="/author/maya-angelou.html" class="author-card">Maya Angelou</a>
+				<a href="/author/marlon-riggs.html" class="author-card">Marlon Riggs</a>
+				<a href="/author/nelson-mandela.html" class="author-card">Nelson Mandela</a>
+                <a href="/author/oscar-wilde.html" class="author-card">Oscar Wilde</a>
+                <a href="/author/plutarch.html" class="author-card">Plutarch</a>
+                <a href="/author/plato.html" class="author-card">Plato</a>
+                <a href="/author/rumi.html" class="author-card">Rumi</a>
+                <a href="/author/sun-tzu.html" class="author-card">Sun Tzu</a>
+				<a href="/author/sam-ervin.html" class="author-card">Sam Ervin</a>
+				<a href="/author/simon-sinek.html" class="author-card">Simon Sinek</a>
+				<a href="/author/viktor-frankl.html" class="author-card">Viktor Frankl</a>
+                
+            </div>
+			
+    <section class="hashtag-cta">
+        <p>Found a quote that speaks to you?<br>
+        Download a beautifully styled quote card or create your own using our <a href="/quote-maker/index.html" target="_blank" target="_blank" rel="noopener" class="hashtag">Quote Image Generator</a> and share it on Instagram, Pinterest, or TikTok.<br>
+        Share the timeless wisdom with the world and hope someone gets touched by it.<br>
+        Tag <a href="quotesthatmatter.com" target="_blank" rel="noopener" class="hashtag">#QuotesThatMatter</a> — let's make timeless wisdom trend.</p>
+    </section>
+	
+        </main>
+
+        <footer>
+             <p>&copy; 2026 QuotesThatMatter.com. All rights reserved.</p>Visit Our Sister site <a href="https://quotesmemo.com/" target="_blank">QuotesMemo.com</a>
+        </footer>
+
+    </div>
+
+<script>
+// ── MOBILE NAV TOGGLE ───────────────────────────────────
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+navToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('nav-open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
+</script>
+</body>
+</html>
