@@ -1,0 +1,11 @@
+title: "Quotes That Matter"
+description: "Discover deep, life-changing quotes that matter. Curated historical wisdom and life quotes because the right quote at the right time can change everything."
+url: "" # Build URL (e.g., https://yourusername.github.io)
+destination: ../articles
+baseurl: "/articles"
+
+markdown: kramdown
+theme: null # We are building a custom/proper layout natively
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

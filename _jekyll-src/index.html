@@ -1,0 +1,20 @@
+---
+layout: default
+description: Explore our collection of deep thoughts and long-form curated wisdom.
+---
+
+<div class="intro-q">
+    <div id="intro-quote">
+        <p>All you need is the right quote at the right time. Sometimes a single sentence can completely shift your perspective, comfort you during a tough day, or give you the exact push you need to take action.</p>
+    </div>
+</div>
+
+<section class="quote-stream">
+    {% for post in site.posts %}
+    <a href="{{ post.url | relative_url }}" class="post-card">
+        <h2>“{{ post.title }}”</h2>
+        <cite class="meta-author">— {{ post.author | default: 'Curated Wisdom' }}</cite>
+    </a>
+
+    {% endfor %}
+</section>

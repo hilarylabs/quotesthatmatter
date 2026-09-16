@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcus Aurelius Quotes | Quotes That Matter</title>
+    <meta name="description" content="The best Marcus Aurelius quotes from Meditations. Stoic wisdom on resilience, self-discipline, and the art of living with intention.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Marcus Aurelius Quotes | Quotes That Matter">
+    <meta property="og:description" content="The best Marcus Aurelius quotes from Meditations. Stoic wisdom on resilience, self-discipline, and intentional living.">
+    <meta property="og:url" content="https://quotesthatmatter.com/stoic/marcus-aurelius.html">
+    <meta property="og:site_name" content="Quotes That Matter">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #FDFBF4;
+            --primary-color: #E67E43;
+            --text-dark: #33221A;
+            --accent-muted: #B4B899;
+            --card-bg: #FFFFFF;
+            --border-soft: #F3EFE3;
+            --text-body: #4a3728;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container { width: 100%; max-width: 750px; margin: 0 auto; }
+
+        /* HEADER */
+        header { text-align: center; margin-bottom: 4rem; padding-top: 1.5rem; position: relative; }
+        header a.logo-link { text-decoration: none; }
+        .logo-main { font-family: font-family: 'Georgia', 'Times New Roman', Times, serif;; font-size: 4rem; color: var(--primary-color); font-weight: 400; line-height: 1; margin-bottom: 0.2rem; letter-spacing: -1px; }
+        .logo-sub {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        header::after { content: ""; display: block; width: 60px; height: 2px; background-color: var(--accent-muted); margin: 1.5rem auto 0; border-radius: 2px; }
+
+        nav { text-align: center; margin-top: 1.5rem; }
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.2rem 0;
+            transition: text-decoration 0.15s ease;
+        }
+        nav a:hover, nav a.active { text-decoration: underline; text-underline-offset: 5px; text-decoration-color: var(--primary-color); color: var(--primary-color); }
+        nav span.sep { color: var(--accent-muted); margin: 0 0.6rem; font-size: 0.7rem; }
+
+        /* BREADCRUMB */
+        .breadcrumb { font-size: 0.75rem; color: var(--accent-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2rem; }
+        .breadcrumb a { color: var(--accent-muted); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--primary-color); }
+
+        /* AUTHOR PROFILE */
+        .author-profile { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-soft); }
+        .author-profile-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid var(--border-soft); }
+        .author-profile-placeholder { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #f3efe3 0%, #e8e0cc 100%); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.8rem; color: var(--primary-color); font-weight: 600; border: 2px solid var(--border-soft); flex-shrink: 0; }
+        .author-profile-info h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.8rem; font-weight: 600; color: var(--text-dark); line-height: 1.2; margin-bottom: 0.3rem; }
+        .author-profile-meta { font-size: 0.8rem; color: var(--accent-muted); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.8px; }
+        .author-profile-bio { font-size: 0.9rem; color: var(--text-body); line-height: 1.6; }
+
+        /* QUOTE COUNT */
+        .quote-count { font-size: 0.78rem; color: var(--accent-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem; }
+
+        /* QUOTE STREAM */
+        .quote-stream { display: flex; flex-direction: column; gap: 2rem; margin-bottom: 4rem; }
+
+        .quote-wrap { background-color: var(--card-bg); border-left: 4px solid var(--primary-color); border-radius: 6px; box-shadow: 0 4px 20px rgba(51,34,26,0.03); overflow: hidden; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .quote-wrap:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(51,34,26,0.06); }
+
+        .quote-body { padding: 2rem 2.2rem 1.2rem; position: relative; }
+        .quote-body::before { content: "\201C"; position: absolute; top: 0.4rem; left: 1.3rem; font-size: 4.5rem; color: rgba(230,126,67,0.07); font-family: 'Times New Roman', serif; line-height: 1; }
+        .quote-body p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.35rem; font-style: italic; color: var(--text-dark); line-height: 1.65; position: relative; z-index: 1; margin-bottom: 1rem; }
+        .quote-body cite { display: block; font-size: 0.78rem; font-style: normal; font-weight: 600; color: var(--accent-muted); text-transform: uppercase; letter-spacing: 1px; text-align: right; }
+
+        /* QUOTE ACTIONS */
+        .quote-actions { display: flex; align-items: center; gap: 0.4rem; padding: 0.75rem 2.2rem; border-top: 1px solid var(--border-soft); background: #faf8f2; flex-wrap: wrap; }
+        .action-label { font-size: 0.68rem; color: var(--accent-muted); text-transform: uppercase; letter-spacing: 1px; margin-right: 0.2rem; }
+
+        .btn-share { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.3rem 0.65rem; border-radius: 4px; font-size: 0.7rem; font-weight: 600; text-decoration: none; cursor: pointer; border: none; transition: opacity 0.15s, transform 0.1s; letter-spacing: 0.3px; font-family: 'DM Sans', sans-serif; }
+        .btn-share:hover { opacity: 0.82; transform: translateY(-1px); }
+        .btn-share:active { transform: translateY(0); }
+
+        .btn-copy { background: var(--border-soft); color: var(--text-body); }
+        .btn-copy.copied { background: #d4edda; color: #2d6a4f; }
+        .btn-card { background: var(--primary-color); color: white; }
+        .btn-twitter { background: #000; color: #fff; }
+        .btn-facebook { background: #1877F2; color: #fff; }
+        .btn-linkedin { background: #0A66C2; color: #fff; }
+        .btn-pinterest { background: #E60023; color: #fff; }
+        .btn-instagram { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: #fff; }
+
+        /* BACK LINK */
+        .back-link { display: inline-block; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.2px; color: var(--accent-muted); text-decoration: none; margin-bottom: 2rem; transition: color 0.15s; }
+        .back-link:hover { color: var(--primary-color); }
+        .back-link::before { content: "← "; }
+
+        /* FOOTER */
+        footer { text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-soft); font-size: 0.85rem; color: var(--accent-muted); letter-spacing: 0.5px; }
+
+        /* MODAL */
+        .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 1000; align-items: center; justify-content: center; padding: 1rem; }
+        .modal-overlay.active { display: flex; }
+        .modal { background: var(--bg-color); border-radius: 12px; padding: 2rem; width: 100%; max-width: 560px; max-height: 90vh; overflow-y: auto; box-shadow: 0 25px 60px rgba(0,0,0,0.3); }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; }
+        .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--text-dark); }
+        .modal-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--accent-muted); padding: 0.2rem 0.5rem; border-radius: 4px; transition: color 0.15s; }
+        .modal-close:hover { color: var(--text-dark); }
+
+        .canvas-container { margin-bottom: 1.2rem; border-radius: 8px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        #quoteCanvas { width: 100%; height: auto; display: block; }
+
+        .style-section { margin-bottom: 1rem; }
+        .style-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-muted); margin-bottom: 0.5rem; display: block; }
+        .style-options { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+        .style-btn, .format-btn { padding: 0.35rem 0.8rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; cursor: pointer; border: 2px solid var(--border-soft); background: var(--card-bg); color: var(--text-body); transition: all 0.15s; font-family: 'DM Sans', sans-serif; }
+        .style-btn:hover, .format-btn:hover { border-color: var(--primary-color); color: var(--primary-color); }
+        .style-btn.active, .format-btn.active { border-color: var(--primary-color); background: var(--primary-color); color: white; }
+
+        .modal-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; padding-top: 1rem; border-top: 1px solid var(--border-soft); }
+        .modal-actions .btn-share { padding: 0.55rem 1rem; font-size: 0.75rem; }
+        .btn-download { background: var(--text-dark); color: white; padding: 0.55rem 1.2rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; cursor: pointer; border: none; font-family: 'DM Sans', sans-serif; transition: opacity 0.15s; }
+        .btn-download:hover { opacity: 0.85; }
+
+        @media (max-width: 600px) {
+            .logo-main { font-size: 3rem; }
+            nav a { font-size: 0.7rem; }
+            nav span.sep { margin: 0 0.35rem; }
+            .author-profile { flex-direction: column; text-align: center; gap: 1rem; }
+            .quote-body { padding: 1.5rem 1.5rem 1rem; }
+            .quote-body p { font-size: 1.2rem; }
+            .quote-actions { padding: 0.65rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <a href="/" class="logo-link">
+            <h1 class="logo-main">Quotes</h1>
+            <div class="logo-sub">That Matter</div>
+        </a>
+        <nav>
+            <a href="/stoic/" class="active">Stoic</a><span class="sep">•</span>
+            <a href="/mindset/">Mindset</a><span class="sep">•</span>
+            <a href="/resilience/">Resilience</a><span class="sep">•</span>
+            <a href="/time/">Time</a><span class="sep">•</span>
+            <a href="/leadership/">Leadership</a><span class="sep">•</span>
+            <a href="/relationship/">Relationship</a><span class="sep">•</span>
+            <a href="/articles/">Articles</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+            <a href="/">Home</a> &nbsp;/&nbsp;
+            Images Credit
+        </div>
+		<p>
+1) Marcus aurelius
+</p>
+2) Seneca The Younger
+3) Epictetus
+4) Cicero
+       
+    </main>
+ <a href="/stoic/" class="back-link">All Stoic Authors</a>
+    <footer><p>&copy; 2026 QuotesThatMatter.com. All rights reserved.</p></footer>
+</div>
+
+</body>
+</html>

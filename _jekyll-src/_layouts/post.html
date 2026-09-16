@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<article class="full-article">
+    <h1>{{ page.title }}</h1>
+    <div class="date-meta">
+        Published on {{ page.date | date: "%B %d, %Y" }} {% if page.author %}by {{ page.author }}{% endif %}
+    </div>
+
+    <div class="content">
+        {{ content }}
+    </div>
+
+    <a href="{{ '/' | relative_url }}" class="back-link">All Articles</a>
+</article>

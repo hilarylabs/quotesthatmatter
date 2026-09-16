@@ -1,0 +1,35 @@
+<svg viewBox="0 0 1210 640" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; border-radius: 8px;"><defs><mask id="imagine-text-gaps-2d1fiw" maskUnits="userSpaceOnUse"><rect x="0" y="0" width="1210" height="640" fill="white"/><rect x="66" y="-57.799991607666016" width="222.02333068847656" height="594.2000122070312" fill="black" rx="2"/><rect x="104" y="214.34722900390625" width="785.705078125" height="52.48402786254883" fill="black" rx="2"/><rect x="104" y="269.34722900390625" width="386.04095458984375" height="52.48402786254883" fill="black" rx="2"/><rect x="104" y="349.47222900390625" width="135.21804809570312" height="32.56944465637207" fill="black" rx="2"/><rect x="997.4368286132812" y="530.7083129882812" width="126.56319427490234" height="47.69444274902344" fill="black" rx="2"/><rect x="1005.7166748046875" y="578.375" width="118.28333282470703" height="21.875" fill="black" rx="2"/><rect x="497.308349609375" y="581.375" width="205.38333129882812" height="21.875" fill="black" rx="2"/></mask></defs>
+  <rect width="1200" height="630" fill="#FDFBF4" style="fill:rgb(253, 251, 244);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- left accent bar -->
+  <rect x="80" y="180" width="5" height="120" fill="#E67E43" opacity="0.5" style="fill:rgb(230, 126, 67);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- big decorative quote mark -->
+  <text x="70" y="420" font-family="Georgia, serif" font-size="520" fill="#E67E43" opacity="0.05" style="fill:rgb(230, 126, 67);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.05;font-family:Georgia, serif;font-size:520px;font-weight:400;text-anchor:start;dominant-baseline:auto">"</text>
+
+  <!-- corner accents TL -->
+  <path d="M60,60 L140,60 M60,60 L60,140" stroke="#E67E43" stroke-width="3" fill="none" opacity="0.3" mask="url(#imagine-text-gaps-2d1fiw)" style="fill:none;stroke:rgb(230, 126, 67);color:rgb(0, 0, 0);stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.3;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <!-- corner accents TR -->
+  <path d="M1140,60 L1060,60 M1140,60 L1140,140" stroke="#E67E43" stroke-width="3" fill="none" opacity="0.3" style="fill:none;stroke:rgb(230, 126, 67);color:rgb(0, 0, 0);stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.3;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <!-- corner accents BL -->
+  <path d="M60,570 L140,570 M60,570 L60,490" stroke="#E67E43" stroke-width="3" fill="none" opacity="0.3" style="fill:none;stroke:rgb(230, 126, 67);color:rgb(0, 0, 0);stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.3;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <!-- corner accents BR -->
+  <path d="M1140,570 L1060,570 M1140,570 L1140,490" stroke="#E67E43" stroke-width="3" fill="none" opacity="0.3" mask="url(#imagine-text-gaps-2d1fiw)" style="fill:none;stroke:rgb(230, 126, 67);color:rgb(0, 0, 0);stroke-width:3px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.3;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- main quote text -->
+  <text x="108" y="255" font-family="Georgia, serif" font-size="42" font-style="italic" fill="#33221A" opacity="0.9" style="fill:rgb(51, 34, 26);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:Georgia, serif;font-size:42px;font-weight:400;font-style:italic;text-anchor:start;dominant-baseline:auto">"Luck is what happens when preparation</text>
+  <text x="108" y="310" font-family="Georgia, serif" font-size="42" font-style="italic" fill="#33221A" opacity="0.9" style="fill:rgb(51, 34, 26);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:Georgia, serif;font-size:42px;font-weight:400;font-style:italic;text-anchor:start;dominant-baseline:auto">meets opportunity."</text>
+
+  <!-- author name -->
+  <text x="108" y="375" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="#E67E43" letter-spacing="3" style="fill:rgb(230, 126, 67);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:system-ui, sans-serif;font-size:22px;font-weight:600;text-anchor:start;dominant-baseline:auto">— CICERO</text>
+
+  <!-- divider line -->
+  <rect x="108" y="393" width="120" height="2" fill="#E67E43" opacity="0.3" style="fill:rgb(230, 126, 67);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.3;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- site logo bottom right -->
+  <text x="1120" y="568" font-family="Georgia, serif" font-size="38" fill="#E67E43" text-anchor="end" font-weight="400" style="fill:rgb(230, 126, 67);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, serif;font-size:38px;font-weight:400;text-anchor:end;dominant-baseline:auto">Quotes</text>
+  <text x="1120" y="595" font-family="system-ui, sans-serif" font-size="13" fill="#E67E43" text-anchor="end" font-weight="700" letter-spacing="2" style="fill:rgb(230, 126, 67);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:system-ui, sans-serif;font-size:13px;font-weight:700;text-anchor:end;dominant-baseline:auto">THAT MATTER</text>
+
+  <!-- watermark bottom center -->
+  <text x="600" y="598" font-family="system-ui, sans-serif" font-size="13" fill="#B4B899" text-anchor="middle" letter-spacing="2" style="fill:rgb(180, 184, 153);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:system-ui, sans-serif;font-size:13px;font-weight:400;text-anchor:middle;dominant-baseline:auto">QUOTESTHATMATTER.COM</text>
+</svg>
