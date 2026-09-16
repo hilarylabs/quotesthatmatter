@@ -3,36 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quotes That Matter | Deep Curated Wisdom & Life Quotes</title>
-    <meta name="description" content="Discover deep, life-changing quotes that matter. Curated historical wisdom and life quotes because the right quote at the right time can change everything.">
+    <title>Favourite Authors | Quotes That Matter</title>
+    <meta name="description" content="Explore wisdom by favourite authors like Marcus Aurelius, Epictetus,Oscar Wilde, Steve Jobs and more because the right quote at the right time can change everything.">
     <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="bingbot" content="index, follow">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://quotesthatmatter.com/">
+    <meta property="og:title" content="Favourite Authors Quotes | Quotes That Matter">
+    <meta property="og:description" content="Explore wisdom by favourite authors like Marcus Aurelius, Epictetus,Oscar Wilde, Steve Jobs and more because the right quote at the right time can change everything.">
+    <meta property="og:url" content="https://quotesthatmatter.com/author/index.html">
     <meta property="og:site_name" content="Quotes That Matter">
-    <meta property="og:title" content="Quotes That Matter | Deep Curated Wisdom">
-    <meta property="og:description" content="Discover deep, life-changing historical wisdom. Because the right quote at the right time can change everything.">
-    <meta property="og:image" content="https://quotesthatmatter.com/android-chrome-512x512.png">
-    <meta property="og:image:secure_url" content="https://quotesthatmatter.com/android-chrome-512x512.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Quotes That Matter">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://quotesthatmatter.com/">
-    <meta name="twitter:title" content="Quotes That Matter: Deep Wisdom & Curated Life Quotes">
-    <meta name="twitter:description" content="Deep Curated Wisdom & Life Quotes because the right quote at the right time can change everything.">
-    <meta name="twitter:image" content="https://quotesthatmatter.com/android-chrome-512x512.png">
 
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --bg-color: #FDFBF4;
@@ -201,210 +187,40 @@
             nav a { width: 100%; }
         }
 
-
-        /* ---- INTRO BLOCK ---- */
-        .intro-q {
-            background: var(--intro-bg);
-            margin-bottom: 1rem;
-            border-radius: 6px;
-            padding: 1.8rem 2rem;
-        }
-
-        .intro-q p {
-            font-size: 1.25rem;
-            font-style: normal;
-            color: var(--text-dark);
-            line-height: 1.7;
-            font-family: 'Libertinus Math', Georgia, serif;
-        }
-        
-.intro-q a { text-decoration: none;}
-
-
-        .intro-q-download {
-            margin-bottom: 0.5rem;
-        }
-
-        .intro-q-download p {
-            font-size: 1.25rem;
-            font-style: normal;
-            color: var(--text-dark);
-            line-height: 1.7;
-            font-family: 'Libertinus Math', Georgia, serif;
-        }
-       
-        .intro-q-download a { color: var(--primary-color); font-style: normal; }
-
-
-        .intro-q .hashtag { color: var(--primary-color); font-weight: 600; font-style: normal; }
-
-        /* ---- DAILY QUOTE (single card, no category list) ---- */
-        .category-tag {
-            display: inline-block;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.68rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--primary-color);
-            background: rgba(230,126,67,0.1);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            text-decoration: none;
-            margin-left: 0.6rem;
-            vertical-align: middle;
-        }
-        .category-tag:hover { background: rgba(230,126,67,0.18); }
-
-        .quote-body cite a.author-link { color: inherit; text-decoration: none; }
-        .quote-body cite a.author-link:hover { color: var(--primary-color); text-decoration: underline; }
-
-        /* ---- EXPLORE GRID SECTIONS ---- */
-        .grid-section { margin-bottom: 1.5rem; }
-
-        .grid-section-header {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            margin-bottom: 0.2rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 1px solid var(--border-soft);
-        }
-
-        .grid-section-title {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            text-transform: none;
-            letter-spacing: 0.2px;
-            color: var(--text-dark);
-        }
-
-        /* ---- RAW LINK COLUMNS (Authors / Topics) ---- */
-        .link-columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 2.5rem;
+        /* ---- PAGE INTRO ---- */
+        .page-intro {
             margin-bottom: 1.5rem;
-            margin-top: 1.5rem;
         }
 
-        .link-col-title {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            text-transform: none;
-            letter-spacing: 0.2px;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-            padding-bottom: 0.8rem;
-            border-bottom: 1px solid var(--border-soft);
-        }
-
-        .link-list { list-style: none; }
-        .link-list li { border-bottom: 1px dotted var(--border-soft); }
-        .link-list a {
-            display: block;
-            padding: 0.2rem 0;
-            text-decoration: none;
-            color: var(--text-dark);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.92rem;
-            font-weight: 500;
-        }
-        .link-list a:hover { color: var(--primary-color); text-decoration: underline; }
-        .link-list a.more-link { color: var(--primary-color); font-weight: 600; }
-
-        /* ---- BOOK LINK LIST (small inline thumbnails) ---- */
-        .book-link-list li { border-bottom: 1px dotted var(--border-soft); }
-        .book-link-list a {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-    
-            text-decoration: none;
-        }
-        .book-link-list a:hover .book-title-sm { color: var(--primary-color); text-decoration: underline; }
-        .book-thumb-sm {
-            width: 48px;
-            height: 48px;
-			margin-bottom 2rem;
-            flex-shrink: 0;
-            background: #F5E7D5;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.5rem;
-            color: var(--accent-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border: 1px dashed rgba(51,34,26,0.15);
-        }
-        .book-title-sm {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--text-dark);
-            line-height: 1.3;
-        }
-		.book-thumb-sm img {
-		    width: 48px;
-            height: 48px;
-			}
-
-        @media (max-width: 600px) {
-            .link-columns { grid-template-columns: 1fr; gap: 1.5rem; }
-        }
-
-        /* ---- PICTURE QUOTES ---- */
-        .pic-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.3rem;
-        }
-        .pic-thumb {
-            width: 100%;
-            max-width: 280px;
-            background: #F5E7D5;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.68rem;
+        .breadcrumb {
+            font-size: 0.75rem;
             color: var(--accent-muted);
             text-transform: uppercase;
             letter-spacing: 1px;
-            border: 1px dashed rgba(51,34,26,0.15);
+            margin-bottom: 0.8rem;
         }
 
-          .pic-thumb img {
-           max-width: 100%;
-           height: auto;
-          display: block; /* Prevents unwanted bottom alignment spacing */
-           }
-
-        @media (max-width: 700px) {
-            .pic-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-        @media (max-width: 480px) {
-            .pic-grid { grid-template-columns: repeat(2, 1fr); }
+        .breadcrumb a {
+            color: var(--accent-muted);
+            text-decoration: none;
         }
 
-        /* ---- DAILY DATE LABEL ---- */
-        .daily-date {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.75rem;
-			font-weight: 700;
+        .breadcrumb a:hover {
             color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 1rem;
-            text-align: center;
         }
 
+        .page-title {
+            font-family: 'Libertinus Math', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--text-dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .page-desc {
+            line-height: 1.7;
+        }
+		
         /* ---- QUOTE CARD ---- */
         .quote-wrap {
             background-color: var(--card-bg);
@@ -412,11 +228,9 @@
             border-radius: 6px;
             box-shadow: 0 4px 20px rgba(51,34,26,0.03);
             overflow: hidden;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
             margin-bottom: 0;
+			padding: 1rem;
         }
-
-
 
         .quote-body { padding: 2rem 2.2rem 1.2rem; position: relative; }
 
@@ -432,80 +246,71 @@
         }
 
         .quote-body p {
+
             font-size: 1.35rem;
-            font-style: normal;
+            font-style: italic;
             color: var(--text-dark);
-            line-height: 1.7;
+            line-height: 1.65;
             position: relative;
             z-index: 1;
             margin-bottom: 1rem;
         }
 
-        .quote-body cite {
-            display: block;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.78rem;
-            font-style: normal;
+
+        /* ---- AUTHOR GRID (grouped by letter, flowing columns) ---- */
+        .author-columns {
+            column-count: 3;
+            column-gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .letter-group {
+            break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            margin-bottom: 2rem;
+        }
+
+        .letter-heading {
+            font-family: 'Libertinus Math', Georgia, serif;
+            font-size: 1.25rem;
             font-weight: 600;
-            color: var(--accent-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-align: right;
+            color: var(--author-card);
+            margin-bottom: 0.5rem;
         }
 
-        /* ---- SHARE ACTIONS ---- */
-        .quote-actions {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            padding: 0.75rem 2.2rem;
-            border-top: 1px solid var(--border-soft);
-            background: #faf8f2;
-            flex-wrap: wrap;
-        }
-
-       .quote-actions a {text-decoration: none;}
-
-        .action-label {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.68rem;
-            color: var(--accent-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-right: 0.2rem;
-        }
-
-        .btn-share {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.3rem 0.65rem;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
+        .letter-divider {
             border: none;
-            transition: opacity 0.15s, transform 0.1s;
-            font-family: 'DM Sans', sans-serif;
+            border-top: 1px solid var(--border-soft);
+            margin-bottom: 0.7rem;
         }
 
-        .btn-share:hover { opacity: 0.82; transform: translateY(-1px); }
-        .btn-copy { background: var(--border-soft); color: var(--text-body); }
-        .btn-copy.copied { background: #d4edda; color: #2d6a4f; }
-        .btn-card { background: var(--primary-color); color: white; }
-        .btn-twitter { background: #000; color: #fff; }
-        .btn-facebook { background: #1877F2; color: #fff; }
-        .btn-linkedin { background: #0A66C2; color: #fff; }
-        .btn-pinterest { background: #E60023; color: #fff; }
-        .btn-instagram { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: #fff; }
-        .btn-pngmaker { background: var(--primary-color); color: white; }
+        .author-list-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .author-card {
+            text-decoration: none;
+            color: var(--author-card);
+            font-family: 'Libertinus Math', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            transition: color 0.2s ease;
+        }
+
+        .author-card:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
 
         /* ---- HASHTAG CTA ---- */
         .hashtag-cta {
             text-align: center;
             padding: 1.5rem 1rem;
             border-top: 1px solid var(--border-soft);
-      
         }
 
         .hashtag-cta p {
@@ -513,12 +318,10 @@
             color: var(--text-body);
             line-height: 1.7;
         }
-
-        .hashtag-cta a { text-decoration: none;}
-
+         .hashtag-cta a {text-decoration: none;}
         .hashtag-cta .hashtag { color: var(--primary-color); font-weight: 600; }
-      
-	  /* ---- FOOTER ---- */
+
+        /* ---- FOOTER ---- */
         footer {
             text-align: center;
             
@@ -541,48 +344,31 @@
 		.footer-links a { margin: 0 0.2rem; }
 		.footer-links .sep { color: var(--accent-muted); margin: 0 0.3rem; }
 
-        /* ---- MODAL ---- */
-        .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 1000; align-items: center; justify-content: center; padding: 1rem; }
-        .modal-overlay.active { display: flex; }
-        .modal { background: var(--bg-color); border-radius: 12px; padding: 2rem; width: 100%; max-width: 560px; max-height: 90vh; overflow-y: auto; box-shadow: 0 25px 60px rgba(0,0,0,0.3); }
-        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; }
-        .modal-title { font-size: 1.4rem; color: var(--text-dark); }
-        .modal-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--accent-muted); padding: 0.2rem 0.5rem; border-radius: 4px; transition: color 0.15s; }
-        .modal-close:hover { color: var(--text-dark); }
-        .canvas-container { margin-bottom: 1.2rem; border-radius: 8px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
-        #quoteCanvas { width: 100%; height: auto; display: block; }
-        .style-section { margin-bottom: 1rem; }
-        .style-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-muted); margin-bottom: 0.5rem; display: block; font-family: 'DM Sans', sans-serif; }
-        .style-options { display: flex; gap: 0.4rem; flex-wrap: wrap; }
-        .style-btn, .format-btn { padding: 0.35rem 0.8rem; border-radius: 4px; font-size: 0.72rem; font-weight: 600; cursor: pointer; border: 2px solid var(--border-soft); background: var(--card-bg); color: var(--text-body); transition: all 0.15s; font-family: 'DM Sans', sans-serif; }
-        .style-btn:hover, .format-btn:hover { border-color: var(--primary-color); color: var(--primary-color); }
-        .style-btn.active, .format-btn.active { border-color: var(--primary-color); background: var(--primary-color); color: white; }
-        .modal-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; padding-top: 1rem; border-top: 1px solid var(--border-soft); }
-        .modal-actions .btn-share { padding: 0.55rem 1rem; font-size: 0.75rem; }
-        .btn-download { background: var(--text-dark); color: white; padding: 0.55rem 1.2rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; cursor: pointer; border: none; font-family: 'DM Sans', sans-serif; transition: opacity 0.15s; }
-        .btn-download:hover { opacity: 0.85; }
-
-        @media (max-width: 600px) {
-            .logo-main { font-size: 2rem; }
-            nav a { font-size: 0.72rem; padding: 0.5rem 0.8rem; }
-            .quote-body { padding: 1.5rem 1.5rem 1rem; }
-            .quote-body p { font-size: 1.2rem; }
-            .quote-actions { padding: 0.65rem 1.5rem; }
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 700px) {
+            .author-columns { column-count: 2; column-gap: 1.8rem; }
         }
 
+        @media (max-width: 600px) {
+            .logo-main { font-size: 3rem; }
+            nav a { font-size: 0.7rem; }
+            nav span.sep { margin: 0 0.35rem; }
+        }
+
+        @media (max-width: 440px) {
+            .author-columns { column-count: 1; }
+        }
     </style>
 </head>
 <body>
-<div class="container">
+    <div class="container">
 
     <header>
         <div class="header-inner">
-        <h1 class="logo-wrap" style="margin:0; line-height:1;">
-        <a href="/" class="logo-link">
-        <span class="logo-main">Quotes</span>
-        <span class="logo-sub" style="display:block;">That Matter</span>
-           </a>
-           </h1>
+            <a href="/" class="logo-link">
+                <span class="logo-main">Quotes</span>
+                <div class="logo-sub">That Matter</div>
+            </a>
             <div class="header-sep"></div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
                 <span class="bar"></span>
@@ -590,460 +376,198 @@
             <nav aria-label="Main navigation" id="mainNav">
                 <a href="/author/index.html">Authors</a>
                 <a href="/topics/index.html">Topics</a>
-                <a href="/books/index.html">Books</a>
+                <a href="/books/index.html">Book</a>
                 <a href="/articles/">Articles</a>
                 <a href="/quote-maker/index.html" class="image-gen">Quote Maker</a>
             </nav>
         </div>
     </header>
 
-    <section class="intro-q">
-        <p>All you need is the right quote at the right time. Sometimes a single sentence can completely shift your perspective, comfort you during a tough day, or give you the exact push you need to take action. That's why <a href="https://quotesthatmatter.com" target="_blank" rel="noopener"><span class="hashtag">#QuotesThatMatter</span></a>is here for you.</p>
-    </section>
+        <main>
+            <div class="page-intro">
+                <div class="breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp;<a href="/author/authors.html"> Authors</a></div>
+                <h1 class="page-title">Authors</h1>
+            </div>
+ <p class="page-desc">Explore wisdom by favourite authors like Marcus Aurelius, Epictetus,Oscar Wilde, Steve Jobs and more because the right quote at the right time can change everything.</p><br>
+ <p class="page-desc">Read a line from your favourite author and sit with it for a second longer than you normally would. It might change your perspectives.</p><br>
 
-    <div class="daily-date">Quotes Of The Day: <span id="daily-date"></span></div>
+<p>Explore wisdoms by author, create a beautiful quote image instantly using our <a href="/quote-maker/index.html" target="_blank" style="text-decoration:none; color:var(--author-card);">Quote Image Generator</a> and upload to your social media in seconds!</p><br>
 
-    <main id="daily-quote-wrap"></main>
+            <div class="author-columns">
 
-    <div class="link-columns">
-        <div class="link-col">
-            <div class="link-col-title">Explore Popular Authors</div>
-            <ul class="link-list">
-                <li><a href="/author/marcus-aurelius.html">Marcus Aurelius</a></li>
-                <li><a href="/author/seneca.html">Seneca</a></li>
-                <li><a href="/author/epictetus.html">Epictetus</a></li>
-                <li><a href="/author/cicero.html">Cicero</a></li>
-                <li><a href="/author/buddha.html">Buddha</a></li>
-                <li><a href="/author/leonardo-da-vinci.html">Leonardo da Vinci</a></li>
-                <li><a href="/author/albert-einstein.html">Albert Einstein</a></li>
-                <li><a href="/author/oscar-wilde.html">Oscar Wilde</a></li>
-				<li><a href="/author/steve-jobs.html">Steve Jobs</a></li>
-				<li><a href="/author/maya-angelou.html">Maya Angelou</a></li>
-                <li><a href="/author/index.html" class="more-link">More authors &rarr;</a></li>
-            </ul>
-        </div>
-        <div class="link-col">
-            <div class="link-col-title">Explore Popular Topics</div>
-            <ul class="link-list">
-                <li><a href="/topics/stoic-quotes.html">Stoic</a></li>
-                <li><a href="/topics/mindset-quotes.html">Mindset</a></li>
-                <li><a href="/topics/resilience-quotes.html">Resilience</a></li>
-                <li><a href="/topics/time-quotes.html">Time</a></li>
-                <li><a href="/topics/leadership-quotes.html">Leadership</a></li>
-                <li><a href="/topics/relationship-quotes.html">Relationship</a></li>
-                <li><a href="/topics/index.html" class="more-link">More topics &rarr;</a></li>
-            </ul>
-        </div>
-        <div class="link-col">
-            <div class="link-col-title">Explore Books</div>
-            <ul class="link-list book-link-list">
-                <li><a href="https://amzn.to/4bQ8oNv" target="_blank" rel="noopener sponsored nofollow"><div class="book-thumb-sm"><img src="/img/books/meditations2.webp"></div><span class="book-title-sm">Meditations</span></a></li>
-                <li><a href="https://amzn.to/3Suo9mC" target="_blank" rel="noopener sponsored nofollow"><div class="book-thumb-sm"><img src="/img/books/letterfromstoic1.webp"></div><span class="book-title-sm">Letters from a Stoic</span></a></li>
-                <li><a href="https://amzn.to/4fX6c9j" target="_blank" rel="noopener sponsored nofollow"><div class="book-thumb-sm"><img src="/img/books/enchiridion1.webp"></div><span class="book-title-sm">Enchiridion</span></a></li>
-                <li><a href="https://amzn.to/4ianRvv" target="_blank" rel="noopener sponsored nofollow"><div class="book-thumb-sm"><img src="/img/books/mansearchingmeaning1.webp"></div><span class="book-title-sm">Man's Search for Meaning</span></a></li>
-                <li><a href="https://amzn.to/461Q4gR" target="_blank" rel="noopener sponsored nofollow"><div class="book-thumb-sm"><img src="/img/books/shortnesslife1.webp"></div><span class="book-title-sm">On the Shortness of Life</span></a></li>
-                <li><a href="/books/index.html" class="more-link">Explore more books &rarr;</a></li>
-            </ul>
-        </div>
-    </div>
+                <div class="letter-group">
+                    <h2 class="letter-heading">A Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/alain-de-botton.html" class="author-card">Alain de Botton</a>
+                        <a href="/author/albert-einstein.html" class="author-card">Albert Einstein</a>
+                        <a href="/author/alexander-the-great.html" class="author-card">Alexander the Great</a>
+                    </div>
+                </div>
 
-    <section class="grid-section">
-        <div class="grid-section-header">
-            <span class="grid-section-title">Share Our Beautiful Picture Quotes</span>
-        </div>
-  <section class=" intro-q-download"><p>Download a beautifully styled quote card and share it on your social media, Instagram, Pinteres, or tiktok.</p>
-<p>Not found what you need? Head to our <a href="/quote-maker/png-generator.html" target="_blank" rel="noopener">Quote Image Generator</a> and create a beautiful Picture Quotes on your own.</p></section>
-        <div class="pic-grid">
-            <div class="pic-thumb"><a href="https://quotesthatmatter.com/topics/stoic-quotes.html#ten-thousand-years" rel="noopener"><img src="/download/qtm-10thousandyears.webp"></img></a></div>
-            <div class="pic-thumb"><a href="https://quotesthatmatter.com/topics/mindset-quotes.html#a-person-who" rel="noopener"><img src="/download/qtm-nevermademistake.webp"></img></a></div>
-            <div class="pic-thumb"><a href="https://quotesthatmatter.com/topics/resilience-quotes.html#nothing-will-work" rel="noopener"><img src="/download/qtm-nothingwillwork.webp"></img></a></div>
-			<div class="pic-thumb"><a href="https://quotesthatmatter.com/topics/time-quotes.html#lost-time-is" rel="noopener"><img src="/download/qtm-losttime.webp"></img></a></div>
-            <div class="pic-thumb"><a href="https://quotesthatmatter.com/topics/leadership-quotes.html#dont-expect-to" rel="noopener"><img src="/download/qtm-dontexpect.webp"></img></a></div>
-            <div class="pic-thumb"><a href="https://quotesthatmatter.com/topics/relationship-quotes.html#creatures-of-emotion" rel="noopener"><img src="/download/qtm-creatureofemotions.webp"></img></a></div>
+                <div class="letter-group">
+                    <h2 class="letter-heading">B Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/buddha.html" class="author-card">Buddha</a>
+                    </div>
+                </div>
 
-        </div> 
-    </section>
+                <div class="letter-group">
+                    <h2 class="letter-heading">C Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/cicero.html" class="author-card">Cicero</a>
+                    </div>
+                </div>
 
+                <div class="letter-group">
+                    <h2 class="letter-heading">D Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/dale-carnegie.html" class="author-card">Dale Carnegie</a>
+                        <a href="/author/david-goggins.html" class="author-card">David Goggins</a>
+                    </div>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">E Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/epictetus.html" class="author-card">Epictetus</a>
+                    </div>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">F Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/finn-juhl.html" class="author-card">Finn Juhl</a>
+                    </div>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">G Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/george-orwell.html" class="author-card">George Orwell</a>
+                    </div>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">H Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/harry-s-truman.html" class="author-card">Harry S. Truman</a>
+                        <a href="/author/henry-david-thoreau.html" class="author-card">Henry David Thoreau</a>
+                    </div>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">J Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/jocko-willink.html" class="author-card">Jocko Willink</a>
+                    </div>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">K Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/khalil-gibran.html" class="author-card">Kahlil Gibran</a>
+                    </div>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">L Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/leonardo-da-vinci.html" class="author-card">Leonardo da Vinci</a>
+                        <a href="/author/lorraine-toussaint.html" class="author-card">Lorraine Toussaint</a>
+                    </div>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">M Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/marcus-aurelius.html" class="author-card">Marcus Aurelius</a>
+                        <a href="/author/marlon-riggs.html" class="author-card">Marlon Riggs</a>
+                        <a href="/author/maya-angelou.html" class="author-card">Maya Angelou</a>
+                    </div>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">N Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/nelson-mandela.html" class="author-card">Nelson Mandela</a>
+                    </div>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">O Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/oscar-wilde.html" class="author-card">Oscar Wilde</a>
+                    </div>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">P Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/plato.html" class="author-card">Plato</a>
+                        <a href="/author/plutarch.html" class="author-card">Plutarch</a>
+                    </div>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">R Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/rumi.html" class="author-card">Rumi</a>
+                    </div>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">S Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/sam-ervin.html" class="author-card">Sam Ervin</a>
+                        <a href="/author/seneca.html" class="author-card">Seneca the Younger</a>
+                        <a href="/author/simon-sinek.html" class="author-card">Simon Sinek</a>
+                        <a href="/author/sun-tzu.html" class="author-card">Sun Tzu</a>
+                    </div>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">V Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/victor-frankl.html" class="author-card">Viktor Frankl</a>
+                    </div>
+                </div>
+
+            </div>
+			
     <section class="hashtag-cta">
-    <p>Found a quote that speaks to you?<br>
-    Download a beautifully styled quote card and share it on Instagram, Pinterest, or TikTok.<br>
-    Share the timeless wisdom with the world and hope someone gets touched by it.<br>
-    Tag <a href="https://quotesthatmatter.com" target="_blank" rel="noopener"><span class="hashtag">#QuotesThatMatter</span> </a> — let's make timeless wisdom trend.</p>
+        <p>Found a quote that speaks to you?<br>
+        Download a beautifully styled quote card or create your own using our <a href="/quote-maker/index.html" target="_blank" target="_blank" rel="noopener" class="hashtag">Quote Image Generator</a> and share it on Instagram, Pinterest, or TikTok.<br>
+        Share the timeless wisdom with the world and hope someone gets touched by it.<br>
+        Tag <a href="quotesthatmatter.com" target="_blank" rel="noopener" class="hashtag">#QuotesThatMatter</a> — let's make timeless wisdom trend.</p>
     </section>
+	
+        </main>
 
-    <footer>
-        <p>&copy; 2026 QuotesThatMatter.com. All rights reserved.</p>
-        <p>Visit Our Sister site <a href="https://quotesmemo.com/" target="_blank" rel="noopener">QuotesMemo.com</a></p>
-        <p class="footer-links">
-            <a href="/about">About</a>
-            <span class="sep">·</span>
-            <a href="/privacy-policy">Privacy Policy</a>
-            <span class="sep">·</span>
-            <a href="/disclaimer">Disclaimer</a>
-            <span class="sep">·</span>
-            <a href="/contact">Contact</a>
-        </p>
-    </footer>
-</div>
+        <footer>
+             <p>&copy; 2026 QuotesThatMatter.com. All rights reserved.</p>Visit Our Sister site <a href="https://quotesmemo.com/" target="_blank">QuotesMemo.com</a>
+        </footer>
 
-<!-- CARD MODAL -->
-<div class="modal-overlay" id="cardModal">
-    <div class="modal">
-        <div class="modal-header">
-            <span class="modal-title">Create Quote Card</span>
-            <button class="modal-close" onclick="closeModal()">✕</button>
-        </div>
-        <div class="canvas-container">
-            <canvas id="quoteCanvas" width="1080" height="1080"></canvas>
-        </div>
-        <div class="style-section">
-            <span class="style-label">Style</span>
-            <div class="style-options">
-                <button class="style-btn active" onclick="setStyle('cream',this)">Cream</button>
-                <button class="style-btn" onclick="setStyle('dark',this)">Dark</button>
-                <button class="style-btn" onclick="setStyle('terracotta',this)">Terracotta</button>
-                <button class="style-btn" onclick="setStyle('sage',this)">Sage</button>
-                <button class="style-btn" onclick="setStyle('midnight',this)">Midnight</button>
-            </div>
-        </div>
-        <div class="style-section">
-            <span class="style-label">Format</span>
-            <div class="style-options">
-                <button class="format-btn active" onclick="setFormat('square',this)">Square 1:1</button>
-                <button class="format-btn" onclick="setFormat('portrait',this)">Portrait 4:5</button>
-                <button class="format-btn" onclick="setFormat('pinterest',this)">Pinterest 2:3</button>
-                <button class="format-btn" onclick="setFormat('story',this)">Story 9:16</button>
-            </div>
-        </div>
-        <div class="modal-actions">
-            <button class="btn-download" onclick="downloadCard()">⬇ Download PNG</button>
-            <a class="btn-share btn-twitter" href="#" onclick="modalShare('twitter');return false;">𝕏 Twitter</a>
-            <a class="btn-share btn-facebook" href="#" onclick="modalShare('facebook');return false;">Facebook</a>
-            <a class="btn-share btn-linkedin" href="#" onclick="modalShare('linkedin');return false;">LinkedIn</a>
-            <a class="btn-share btn-pinterest" href="#" onclick="modalShare('pinterest');return false;">Pinterest</a>
-            <button class="btn-share btn-instagram" onclick="instagramDownload()">📷 Instagram</button>
-        </div>
     </div>
-</div>
 
-<!-- ═══════════════════════════════════════════════════
-     QUOTE DATA — Add quotes here only, never touch engine
-     Categories: stoic | mindset | resilience | time | leadership | relationship
-════════════════════════════════════════════════════ -->
 <script>
-const CATEGORIES = [
-    {
-        id: "stoic",
-        label: "Daily Wisdom on Stoic",
-        icon: "🏛️",
-        link: "/topics/index.html",
-        quotes: [
-            { id: "power-over-mind",      author: "Marcus Aurelius", cite: "Meditations",              text: "You have power over your mind, not outside events. Realise this, and you will find strength." },
-            { id: "impediment-action",    author: "Marcus Aurelius", cite: "Meditations",              text: "The impediment to action advances action. What stands in the way becomes the way." },
-            { id: "suffer-imagination",   author: "Seneca",          cite: "Letters from a Stoic",     text: "We suffer more often in imagination than in reality." },
-            { id: "shortness-life",       author: "Seneca",          cite: "On the Shortness of Life", text: "It is not that we have a short time to live, but that we waste a lot of it." },
-            { id: "what-we-choose",       author: "Epictetus",       cite: "Enchiridion",              text: "It's not what happens to you, but how you react to it that matters." },
-        ]
-    },
-    {
-        id: "mindset",
-        label: "Daily Wisdom on Mindset",
-        icon: "🧠",
-        link: "/mindset/authors.html",
-        quotes: [
-            { id: "getting-started",      author: "Mark Twain",      cite: "",                         text: "The secret of getting ahead is getting started." },
-            { id: "believe-capable",      author: "Henry Ford",      cite: "",                         text: "Whether you think you can or you think you can't, you're right." },
-            { id: "your-life-choices",    author: "Albert Camus",    cite: "",                         text: "Life is the sum of all your choices." },
-            { id: "change-thoughts",      author: "Marcus Aurelius", cite: "Meditations",              text: "The soul becomes dyed with the colour of its thoughts." },
-            { id: "comfort-zone",         author: "Neale Donald Walsch", cite: "",                     text: "Life begins at the end of your comfort zone." },
-        ]
-    },
-    {
-        id: "resilience",
-        label: "Daily Wisdom on Resilience",
-        icon: "💪",
-        link: "/topics/index.html",
-        quotes: [
-            { id: "why-to-live",          author: "Viktor Frankl",   cite: "Man's Search for Meaning", text: "He who has a why to live for can bear almost any how." },
-            { id: "darkest-moments",      author: "Aristotle Onassis", cite: "",                       text: "It is during our darkest moments that we must focus to see the light." },
-            { id: "fall-seven",           author: "Japanese Proverb", cite: "",                        text: "Fall seven times, stand up eight." },
-            { id: "rock-bottom",          author: "J.K. Rowling",    cite: "",                         text: "Rock bottom became the solid foundation on which I rebuilt my life." },
-            { id: "strength-struggle",    author: "Unknown",         cite: "",                         text: "Strength does not come from winning. Your struggles develop your strength." },
-        ]
-    },
-    {
-        id: "time",
-        label: "Daily Wisdom on Time",
-        icon: "⏳",
-        link: "/topics/index.html",
-        quotes: [
-            { id: "time-never-returns",   author: "Seneca",          cite: "Letters from a Stoic",     text: "Begin at once to live, and count each separate day as a separate life." },
-            { id: "lost-time",            author: "Benjamin Franklin", cite: "",                       text: "Lost time is never found again." },
-            { id: "how-spend-time",       author: "Annie Dillard",   cite: "",                         text: "How we spend our days is, of course, how we spend our lives." },
-            { id: "time-most-valuable",   author: "Theophrastus",    cite: "",                         text: "Time is the most valuable thing a man can spend." },
-            { id: "dont-watch-clock",     author: "Sam Levenson",    cite: "",                         text: "Don't watch the clock; do what it does. Keep going." },
-        ]
-    },
-    {
-        id: "leadership",
-        label: "Daily Wisdom on Leadership",
-        icon: "👑",
-        link: "/topics/index.html",
-        quotes: [
-            { id: "lead-by-example",      author: "Albert Schweitzer", cite: "",                      text: "Example is not the main thing in influencing others. It is the only thing." },
-            { id: "leader-servant",       author: "Robert Greenleaf", cite: "",                       text: "The servant-leader is servant first." },
-            { id: "innovation-leader",    author: "Steve Jobs",       cite: "",                        text: "Innovation distinguishes between a leader and a follower." },
-            { id: "become-leader",        author: "John Maxwell",     cite: "",                        text: "A leader is one who knows the way, goes the way, and shows the way." },
-            { id: "leadership-practice",  author: "Peter Drucker",    cite: "",                        text: "Management is doing things right; leadership is doing the right things." },
-        ]
-    },
-    {
-        id: "relationship",
-        label: "Daily Wisdom on Relationship",
-        icon: "🤝",
-        link: "/topics/index.html",
-        quotes: [
-            { id: "love-in-heart",        author: "Oscar Wilde",     cite: "",                         text: "Keep love in your heart. A life without it is like a sunless garden when the flowers are dead." },
-            { id: "beautiful-heart",      author: "Helen Keller",    cite: "",                         text: "The best and most beautiful things in the world cannot be seen or even touched — they must be felt with the heart." },
-            { id: "connection-purpose",   author: "Brené Brown",     cite: "",                         text: "Connection is why we're here. It is what gives purpose and meaning to our lives." },
-            { id: "known-loved",          author: "C.S. Lewis",      cite: "",                         text: "Friendship is born at the moment when one person says to another, 'What! You too?'" },
-            { id: "boundaries-love",      author: "Brené Brown",     cite: "",                         text: "Daring to set boundaries is about having the courage to love ourselves, even when we risk disappointing others." },
-        ]
-    }
-];
-</script>
-
-<!-- ═══════════════════════════════════════════════════
-     ENGINE — Do not edit below this line
-════════════════════════════════════════════════════ -->
-<script>
-    // ── DATE SEED ─────────────────────────────────────────
-    function getTodaySeed() {
-        const d = new Date();
-        return d.getFullYear() * 10000 + (d.getMonth()+1) * 100 + d.getDate();
-    }
-
-    function seededRandom(seed) {
-        const x = Math.sin(seed) * 10000;
-        return x - Math.floor(x);
-    }
-
-    function getDailyQuote(quotes, categoryIndex) {
-        // Each category uses a different seed offset so they never pick the same quote
-        const seed = getTodaySeed() + categoryIndex * 97;
-        const index = Math.floor(seededRandom(seed) * quotes.length);
-        return quotes[index];
-    }
-
-    // ── SET DATE LABEL ────────────────────────────────────
-    const dateEl = document.getElementById('daily-date');
-    const today = new Date();
-    dateEl.textContent = today.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
-
-    // ── AUTHOR SLUG HELPER ─────────────────────────────────
-    // Generic/non-person sources don't get an author page link
-    const NO_LINK_AUTHORS = new Set(["Unknown", "Japanese Proverb"]);
-    function authorSlug(name) {
-        return name.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/\s+/g, '-');
-    }
-    function authorHtml(name) {
-        if (NO_LINK_AUTHORS.has(name)) return name;
-        return `<a href="/author/${authorSlug(name)}.html" class="author-link">${name}</a>`;
-    }
-
-    // ── RENDER SINGLE DAILY QUOTE ─────────────────────────
-    const quoteWrapEl = document.getElementById('daily-quote-wrap');
-
-    // Flat lookup for all quotes across all categories
-    const ALL_QUOTES = {};
-    CATEGORIES.forEach(cat => cat.quotes.forEach(q => ALL_QUOTES[q.id] = { ...q, category: cat.id }));
-
-    // Flat pool for picking a single rotating quote regardless of category
-    const QUOTE_POOL = Object.values(ALL_QUOTES);
-    const CATEGORY_BY_ID = {};
-    CATEGORIES.forEach(cat => CATEGORY_BY_ID[cat.id] = cat);
-
-    const dailyIndex = Math.floor(seededRandom(getTodaySeed()) * QUOTE_POOL.length);
-    const q = QUOTE_POOL[dailyIndex];
-    const qCat = CATEGORY_BY_ID[q.category];
-
-    quoteWrapEl.innerHTML = `
-    <div class="quote-wrap" id="${q.id}">
-        <div class="quote-body">
-            <p>\u201C${q.text}\u201D</p>
-            <cite>\u2014 ${authorHtml(q.author)}${q.cite ? ', ' + q.cite : ''}<a href="${qCat.link}" class="category-tag">${qCat.label.replace('Daily Wisdom on ', '')}</a></cite>
-        </div>
-        <div class="quote-actions">
-            <span class="action-label">Share This Quote</span>
-            <button class="btn-share btn-copy"      onclick="copyAnchor('${q.id}',this)">🔗 Link</button>
-            <button class="btn-share btn-card"      onclick="openModal('${q.id}')">🎨 Download This Quote</button>
-            <button class="btn-share btn-twitter"   onclick="directShare('twitter','${q.id}')">𝕏</button>
-            <button class="btn-share btn-facebook"  onclick="directShare('facebook','${q.id}')">f</button>
-            <button class="btn-share btn-linkedin"  onclick="directShare('linkedin','${q.id}')">in</button>
-            <button class="btn-share btn-pinterest" onclick="directShare('pinterest','${q.id}')">P</button>
-            <button class="btn-share btn-instagram" onclick="openModal('${q.id}')">📷</button>
-           <button class="btn-share btn-pngmaker" onclick="directShare('quotemaker','${q.id}')">Generate Your Quote</button>
-        </div>
-    </div>`;
-
-    // ── SHARE HELPERS ─────────────────────────────────────
-    function getQ(id)       { return ALL_QUOTES[id]; }
-    function pageUrl(id)    { return encodeURIComponent(`${location.origin}${location.pathname}#${id}`); }
-    function shareText(id)  { const q = getQ(id); return encodeURIComponent(`\u201C${q.text}\u201D \u2014 ${q.author} #QuotesThatMatter`); }
-
-    function directShare(platform, id) {
-        const urls = {
-            twitter:   `https://twitter.com/intent/tweet?text=${shareText(id)}&url=${pageUrl(id)}`,
-            facebook:  `https://www.facebook.com/sharer/sharer.php?u=${pageUrl(id)}`,
-            linkedin:  `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl(id)}`,
-            pinterest: `https://pinterest.com/pin/create/button/?url=${pageUrl(id)}&description=${shareText(id)}`,
-           quotemaker: `https://quotesthatmatter.com/quote-maker/png-generator.html?url=${pageUrl(id)}`
-        };
-        window.open(urls[platform], '_blank');
-    }
-
-    function copyAnchor(id, btn) {
-        navigator.clipboard.writeText(`${location.origin}${location.pathname}#${id}`).then(() => {
-            const orig = btn.textContent;
-            btn.textContent = '✓ Copied!';
-            btn.classList.add('copied');
-            setTimeout(() => { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
-        });
-    }
-
-    // ── CARD GENERATOR ────────────────────────────────────
-    let activeId = null, activeStyle = 'cream', activeFormat = 'square';
-
-    const STYLES = {
-        cream:      { bg:'#FDFBF4', text:'#33221A', author:'#E67E43', wm:'#B4B899',            accent:'#E67E43' },
-        dark:       { bg:'#1a1008', text:'#F5F0E8', author:'#E67E43', wm:'#6b5a50',            accent:'#E67E43' },
-        terracotta: { bg:'#E67E43', text:'#FDFBF4', author:'#FDFBF4', wm:'rgba(255,255,255,0.5)', accent:'#FDFBF4' },
-        sage:       { bg:'#8a9a7a', text:'#FDFBF4', author:'#FDFBF4', wm:'rgba(255,255,255,0.5)', accent:'#FDFBF4' },
-        midnight:   { bg:'#1a2035', text:'#E8E0D0', author:'#E67E43', wm:'#4a5068',            accent:'#E67E43' }
-    };
-
-    const FORMATS = {
-        square:    { w:1080, h:1080 },
-        portrait:  { w:1080, h:1350 },
-        pinterest: { w:1000, h:1500 },
-        story:     { w:1080, h:1920 }
-    };
-
-    function openModal(id) {
-        activeId = id;
-        document.getElementById('cardModal').classList.add('active');
-        document.body.style.overflow = 'hidden';
-        setTimeout(drawCard, 50);
-    }
-
-    function closeModal() {
-        document.getElementById('cardModal').classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    document.getElementById('cardModal').addEventListener('click', e => {
-        if (e.target === document.getElementById('cardModal')) closeModal();
-    });
-
-    function setStyle(s, btn) {
-        activeStyle = s;
-        document.querySelectorAll('.style-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        drawCard();
-    }
-
-    function setFormat(f, btn) {
-        activeFormat = f;
-        document.querySelectorAll('.format-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        drawCard();
-    }
-
-    function wrapText(ctx, text, maxWidth) {
-        const words = text.split(' ');
-        const lines = [];
-        let current = '';
-        words.forEach(word => {
-            const test = current ? current + ' ' + word : word;
-            if (ctx.measureText(test).width > maxWidth && current) { lines.push(current); current = word; }
-            else current = test;
-        });
-        if (current) lines.push(current);
-        return lines;
-    }
-
-    function drawCard() {
-        const canvas = document.getElementById('quoteCanvas');
-        const fmt = FORMATS[activeFormat];
-        canvas.width = fmt.w; canvas.height = fmt.h;
-        const ctx = canvas.getContext('2d');
-        const s = STYLES[activeStyle];
-        const W = fmt.w, H = fmt.h, pad = W * 0.1;
-
-        ctx.fillStyle = s.bg; ctx.fillRect(0, 0, W, H);
-
-        // Corner accents
-        ctx.strokeStyle = s.accent; ctx.globalAlpha = 0.12; ctx.lineWidth = 3;
-        const m = 40, l = 80;
-        [[m,m,m+l,m,m,m+l],[W-m-l,m,W-m,m,W-m,m+l],[m,H-m-l,m,H-m,m+l,H-m],[W-m-l,H-m,W-m,H-m,W-m,H-m-l]].forEach(([x1,y1,x2,y2,x3,y3])=>{
-            ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.lineTo(x3,y3); ctx.stroke();
-        });
-
-        // Big quote mark
-        ctx.globalAlpha = 0.06; ctx.fillStyle = s.accent;
-        ctx.font = `bold ${W*0.45}px Georgia`;
-        ctx.fillText('\u201C', pad*0.4, H*0.52);
-        ctx.globalAlpha = 1;
-
-        // Accent bar
-        ctx.fillStyle = s.accent;
-        ctx.fillRect(pad*0.55, H*0.28, 4, H*0.14);
-
-        // Quote text
-        const q = getQ(activeId);
-        const maxW = W - pad*2.2;
-        const fontSize = Math.min(64, Math.max(48, Math.floor(W / (q.text.length * 0.38))));
-        ctx.fillStyle = s.text;
-        ctx.font = `italic ${fontSize}px 'Georgia', serif`;
-        ctx.textAlign = 'left';
-
-        const lines = wrapText(ctx, q.text, maxW);
-        const lineH = fontSize * 1.55;
-        let startY = Math.max(H*0.22, (H - lines.length*lineH) / 2 - fontSize*0.8);
-        lines.forEach((line, i) => ctx.fillText(line, pad, startY + i*lineH));
-
-        // Author
-        const authorY = startY + lines.length*lineH + fontSize*1.1;
-        ctx.fillStyle = s.author;
-        ctx.font = `600 ${fontSize*0.46}px 'DM Sans', sans-serif`;
-        ctx.fillText(`\u2014 ${q.author.toUpperCase()}`, pad, authorY);
-
-        // Divider
-        ctx.fillStyle = s.accent; ctx.globalAlpha = 0.3;
-        ctx.fillRect(pad, authorY + fontSize*0.65, W*0.14, 2);
-        ctx.globalAlpha = 1;
-
-        // Watermark
-        ctx.fillStyle = s.wm;
-        ctx.font = `500 ${W*0.021}px 'DM Sans', sans-serif`;
-        ctx.textAlign = 'center';
-        ctx.fillText('QUOTESTHATMATTER.COM', W/2, H - pad*0.55);
-    }
-
-    function downloadCard() {
-        const q = getQ(activeId);
-        const link = document.createElement('a');
-        link.download = `qtm-${q.author.replace(/\s+/g,'-').toLowerCase()}-quote.png`;
-        link.href = document.getElementById('quoteCanvas').toDataURL('image/png');
-        link.click();
-    }
-
-    function modalShare(platform) { directShare(platform, activeId); }
-
-    function instagramDownload() {
-        downloadCard();
-        setTimeout(() => alert('Image downloaded!\n\nOpen Instagram → New Post → select the downloaded image. Your branded quote card is ready! 📷'), 400);
-    }
 // ── MOBILE NAV TOGGLE ───────────────────────────────────
 const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
@@ -1052,6 +576,5 @@ navToggle.addEventListener('click', () => {
     navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 });
 </script>
-
 </body>
 </html>
