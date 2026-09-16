@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Quote Maker & Generator | QuotesThatMatter.com</title>
+    <meta name="description" content="Free online quote card maker & generator for Instagram, Facebook, Pinterest and other social media with custom backgrounds and professional layouts in seconds.">
+    <meta name="robots" content="index, follow">
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Free Quote Maker & Image Generator" />
+	<meta property="og:description" content="Free online quote card maker & generator for Instagram, Facebook, Pinterest and other social media with custom backgrounds and professional layouts in seconds./>
+	<meta property="og:url" content="https://quotesthatmatter.com/quote-maker/index.html" />
+	<meta property="og:site_name" content="Quotes That Matter" />
+	<meta property="og:image" content="https://quotesthatmatter.com/img/logo/maker-logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+	<meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Quote Maker & Image Generator" />
+    <meta name="twitter:description" content="Free online quote maker & generator for Instagram, Facebook, and Pinterest with custom backgrounds and professional layouts in seconds." />
+    <meta name="twitter:image" content="https://quotesthatmatter.com/img/logo/maker-logo.png" />
+	
+    <link rel="icon" type="image/x-icon" href="/img/logo/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/logo/favicon-32x32.png">
+
+   <style>
+        :root {
+            --bg-color: #FDFBF4;
+            --primary-color: #E67E43;
+            --text-dark: #33221A;
+            --accent-muted: #B4B899;
+            --card-bg: #FFFFFF;
+            --border-soft: #F3EFE3;
+        }
+		
+        /* ---- HEADER ---- */
+        header {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            background-color: #F5E7D5;
+        }
+
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+        }
+
+        header a.logo-link {
+            text-decoration: none;
+            display: block;
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        .logo-sub {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 0.1rem;
+        }
+
+        .header-sep {
+            width: 1px;
+            height: 2.6rem;
+            background-color: rgba(51,34,26,0.15);
+            flex-shrink: 0;
+        }
+
+        /* ---- NAV ---- */
+        nav {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+        nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            padding: 0.6rem 0.95rem;
+            border-radius: 8px;
+            background-color: rgba(230,126,67,0.08);
+            transition: background-color 0.15s ease, color 0.15s ease;
+        }
+        nav a:hover, nav a.active { background-color: rgba(230,126,67,0.16); color: var(--primary-color); }
+        nav a.image-gen {
+            color: #fff;
+            background-color: var(--primary-color);
+        }
+        nav a.image-gen:hover { background-color: var(--primary-color); opacity: 0.88; }
+		
+
+       .page-maker {
+			font-size: 2.5rem;
+			color: var(--primary-color);
+			font-weight: 500;
+			line-height: 1;
+			width: 100%;
+			text-align: center; 
+			letter-spacing: -1px;
+			margin: 0 0 0 0;
+		}
+		
+		.page-desc {
+		    font-size: 1.15rem;
+			max-width: 1000px;
+			width: 100%;
+			margin: 0.5rem 0 0 0;
+			}
+		
+		.step-list { list-style: none; margin-bottom: 0.5rem; }
+		.step-list  li{ border-bottom: 1px dotted var(--border-soft); }
+
+        body {
+			font-family: system-ui, -apple-system, sans-serif;
+			background-color: var(--bg);
+			margin: 0; padding: 0 20px 40px 20px;
+			display: flex;
+			justify-content: center;
+			}
+			
+        .app-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 30px; max-width: 1000px;
+			width: 100%;
+			}
+			
+        .controls {
+			flex: 1;
+			min-width: 300px;
+			background: white;
+			padding: 10px;
+			border-radius: 12px;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+			}
+			
+        .preview-area {
+			flex: 1;
+			min-width: 300px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			}
+		
+        .form-group {
+			margin-bottom: 15px;
+			}
+			
+        label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: 600;
+			font-size: 14px;
+			color: #333;
+			}
+			
+        input, textarea, select {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			box-sizing: border-box;
+			font-family: inherit;
+			}
+
+        input[type="range"] {
+            padding: 0;
+            margin-top: 5px;
+        }
+
+        .color-picker-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        input[type="color"] {
+            width: 50px;
+            height: 40px;
+            padding: 2px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+		
+        canvas {
+			display: none;
+			}
+        .bg-status {
+            font-size: 0.85rem;
+            margin-top: 6px;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+
+        .bg-status.is-loading {
+            color: var(--accent-muted);
+            background: transparent;
+            font-style: italic;
+        }
+
+        .bg-status.is-error {
+            color: #b3261e;
+            background: #fdecea;
+            border: 1px solid #f5c6c2;
+        }
+
+        #previewImage {
+			max-width: 100%;
+			height: auto;
+			border-radius: 8px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+			transition: all 0.3s ease;
+			}
+			
+        .btn-download {
+			margin-top: 20px;
+			background-color: #28a745;
+			color: white;
+			text-decoration: none;
+			padding: 12px 24px;
+			border-radius: 6px;
+			font-weight: bold;
+			display: inline-block;
+			text-align: center;
+			width: 100%;
+			box-sizing: border-box;
+			}
+			
+        .btn-download:hover {
+			background-color: #218838;
+			}
+			
+        .upload-section {
+			background: #f8f9fa;
+			padding: 15px;
+			border-radius: 8px;
+			border: 1px dashed #ccc;
+			margin-top: 10px;
+			}
+			
+        .upload-section label {
+			font-size: 13px;
+			color: #555;
+			}
+			
+/* ---- FOOTER ---- */
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    color: #857469;
+    letter-spacing: 0.5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+footer p { 
+    margin: 0 0 0.5rem 0; 
+}
+
+footer p:last-child { 
+    margin-bottom: 0; 
+}
+
+.footer-links a { 
+    margin: 0 0.2rem; 
+}
+
+.footer-links .sep { 
+    color: var(--accent-muted); 
+    margin: 0 0.3rem; 
+}
+    </style>
+</head>
+<body>
+<div class="app-container">
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo-link">
+                <span class="logo-main">Quotes</span>
+                <div class="logo-sub">That Matter</div>
+            </a>
+            <div class="header-sep"></div>
+            <nav aria-label="Main navigation">
+                <a href="/author/index.html">Author</a>
+                <a href="/topics/index.html">Topics</a>
+                <a href="/books/index.html">Books</a>
+                <a href="/articles/">Articles</a>
+                <a href="/quote-maker/index.html" class="image-gen">Quote Maker</a>
+            </nav>
+        </div>
+    </header>
+
+<div class="page-maker">
+<h1 class="page-maker">Free Quote Maker & Generator</h1>
+</div>
+
+<p class="page-desc">Use our free quote maker & generator to generate quote card for a quick social media update, Instagram, Facebook, and Pinterest with beautiful custom backgrounds in seconds. You can create a beautiful quote card with image url without downloading them on your computer. Find beautiful image on the internet, get the image url and put it in the image url column to get a beautiful background for your quote card for free!</p>
+
+    <div class="controls">
+        <h2>Quote Builder</h2>
+        <div class="form-group">
+            <label>Quote Text</label>
+            <textarea id="quoteText" rows="3" oninput="drawCanvas()">The secret of getting ahead is getting started.</textarea>
+        </div>
+        <div class="form-group">
+            <label>Author Name</label>
+            <input type="text" id="authorName" value="Mark Twain" oninput="drawCanvas()">
+        </div>
+
+        <!-- FONT SELECTION SECTION -->
+        <div class="form-group">
+            <label>Font Family</label>
+            <select id="fontSelect" onchange="handleFontChange()">
+                <optgroup label="System / Built-in Fonts">
+                    <option value="system-ui, sans-serif">Sans-Serif (System)</option>
+                    <option value="Georgia, serif">Georgia (Serif)</option>
+                    <option value="'Courier New', monospace">Courier (Monospace)</option>
+                    <option value="'Impact', sans-serif">Impact (Bold display)</option>
+                </optgroup>
+                <optgroup label="Google Fonts">
+                    <option value="Roboto">Roboto</option>
+                    <option value="Playfair Display">Playfair Display</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Lora">Lora</option>
+                    <option value="Cinzel">Cinzel</option>
+                    <option value="Pacifico">Pacifico</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Or Paste Google Font Link/Specimen:</label>
+            <input type="text" id="fontUrlInput" placeholder="e.g. https://fonts.google.com/specimen/Roboto" onchange="loadCustomGoogleFont()">
+            <p id="fontStatus" class="bg-status" style="display:none;"></p>
+        </div>
+
+        <!-- TEXT COLOR SELECTION -->
+        <div class="form-group">
+            <label>Text Color</label>
+            <div class="color-picker-wrapper">
+                <input type="color" id="textColorPicker" value="#FFFFFF" oninput="drawCanvas()">
+                <select id="textColorMode" onchange="drawCanvas()">
+                    <option value="custom">Use Picker Color</option>
+                    <option value="palette">Match Selected Palette Default</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- BACKGROUND IMAGE SECTION -->
+        <div class="form-group">
+            <label>Background Image</label>
+            <select id="bgSelect" onchange="handleDropdownChange()">
+                <option value="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjExMTN8MHwxfHNlYXJjaHwxfHxuYXR1cmV8ZW58MHx8fHwxNjk5OTMzMzAwfDA&ixlib=rb-4.0.3&q=80&w=1080">Nature Forest</option>
+                <option value="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjExMTN8MHwxfHNlYXJjaHwxfHxiZWFjaHxlbnwwfHx8fDE2OTk5MzM1MzR8MA&ixlib=rb-4.0.3&q=80&w=1080">Sunny Beach</option>
+                <option value="https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjExMTN8MHwxfHNlYXJjaHwxfHxzcGFjZXxlbnwwfHx8fDE2OTk5MzM1NDh8MA&ixlib=rb-4.0.3&q=80&w=1080">Deep Space</option>
+            </select>
+            
+            <div class="upload-section">
+                <label>Upload Your Own Image:</label>
+                <input type="file" id="bgUpload" accept="image/*">
+            </div>
+        </div>
+		
+		<div class="form-group">
+            <label>Or Paste Image URL:</label>
+            <input type="text" id="urlInput" placeholder="https://example.com/image.jpg" oninput="drawCanvas()">
+            <p id="bgStatus" class="bg-status" style="display:none;"></p>
+        </div>
+
+        <!-- OVERLAY OPACITY PERCENTAGE SLIDER -->
+        <div class="form-group">
+            <label for="overlayOpacity">Overlay Opacity: <span id="opacityValue">50%</span></label>
+            <input type="range" id="overlayOpacity" min="0" max="100" value="50" oninput="updateOpacityDisplay(); drawCanvas();">
+        </div>
+
+        <!-- FONT SIZE SCALE SLIDER -->
+        <div class="form-group">
+            <label for="fontSizeScale">Font Size: <span id="fontSizeValue">100%</span></label>
+            <input type="range" id="fontSizeScale" min="50" max="180" value="100" oninput="updateFontSizeDisplay(); drawCanvas();">
+        </div>
+
+        <div class="form-group">
+            <label>Download Format</label>
+            <select id="formatSelect" onchange="saveFormatPreference()">
+                <option value="image/png">PNG (best quality, larger file)</option>
+                <option value="image/jpeg">JPG (smaller file)</option>
+                <option value="image/webp">WebP (smallest file, modern browsers)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Dimensions</label>
+            <select id="dimensionSelect" onchange="drawCanvas()">
+                <option value="insta_sq">Instagram Square (1080x1080)</option>
+                <option value="insta_st">Instagram Story (1080x1920)</option>
+                <option value="fb_post">Facebook Post (1200x630)</option>
+                <option value="pinterest">Pinterest Pin (1000x1500)</option>
+            </select>
+        </div>
+
+        <!-- COLOR PALETTE SECTION -->
+        <div class="form-group">
+            <label>Color Palette (Accents & Overlays)</label>
+            <select id="paletteSelect" onchange="drawCanvas()">
+                <option value="none">None (Dark Overlay)</option>
+                <option value="cream">Cream</option>
+                <option value="dark">Dark</option>
+                <option value="terracotta">Terracotta</option>
+                <option value="sage">Sage</option>
+                <option value="midnight">Midnight</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Layout Style</label>
+            <select id="layoutSelect" onchange="drawCanvas()">
+                <option value="minimalist">Minimalist (Centered)</option>
+                <option value="bold">Bold (Left-Aligned)</option>
+                <option value="elegant">Elegant (Bordered)</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="preview-area">
+        <canvas id="canvas" aria-label="Quote image preview" role="img"></canvas>
+        <img id="previewImage" src="" alt="Quote Preview">
+        <a id="downloadBtn" href="#" onclick="downloadImage(); return false;" class="btn-download">Download Image</a>
+    </div>
+	<footer><p>&copy; 2026 QuotesThatMatter.com. All rights reserved.</p>
+	<p>Free Quote Maker & Generator v2.1</p>
+	 <p>Visit Our Sister site <a href="https://quotesmemo.com/" target="_blank">QuotesMemo.com</a></p>
+     <p class="footer-links">
+            <a href="/about">About</a>
+            <span class="sep">·</span>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <span class="sep">·</span>
+            <a href="/disclaimer">Disclaimer</a>
+            <span class="sep">·</span>
+            <a href="/contact">Contact</a>
+        </p>
+	</footer>
+</div>
+
+<script>
+    const palettes = {
+        none:       { bg:'0,0,0', text:'#FFFFFF', author:'#E67E43', wm:'rgba(255,255,255,0.7)', accent:'#E67E43' },
+        cream:      { bg:'253,251,244', text:'#33221A', author:'#E67E43', wm:'#686962', accent:'#E67E43' },
+        dark:       { bg:'26,16,8', text:'#F5F0E8', author:'#E67E43', wm:'#857469', accent:'#E67E43' },
+        terracotta: { bg:'192,86,33', text:'#FDFBF4', author:'#FDFBF4', wm:'rgba(255,255,255,0.5)', accent:'#FDFBF4' },
+        sage:       { bg:'138,154,122', text:'#1C2416', author:'#FDFBF4', wm:'rgba(255,255,255,0.5)', accent:'#FDFBF4' },
+        midnight:   { bg:'26,32,53', text:'#E8E0D0', author:'#E67E43', wm:'#6E7694', accent:'#E67E43' }
+    };
+
+    const dimensions = {
+        insta_sq:  { w: 1080, h: 1080 },
+        insta_st:  { w: 1080, h: 1920 },
+        fb_post:   { w: 1200, h: 630 },
+        pinterest: { w: 1000, h: 1500 }
+    };
+
+    let customUploadUrl = null;
+    let activeFontFamily = 'system-ui, sans-serif';
+
+    function updateOpacityDisplay() {
+        const val = document.getElementById('overlayOpacity').value;
+        document.getElementById('opacityValue').innerText = val + '%';
+    }
+
+    function updateFontSizeDisplay() {
+        const val = document.getElementById('fontSizeScale').value;
+        document.getElementById('fontSizeValue').innerText = val + '%';
+    }
+
+    function fetchAndApplyGoogleFont(fontName) {
+        const fontSlug = fontName.replace(/\s+/g, '+');
+        const linkId = 'gfont-' + fontName.replace(/\s+/g, '-').toLowerCase();
+
+        if (!document.getElementById(linkId)) {
+            const link = document.createElement('link');
+            link.id = linkId;
+            link.rel = 'stylesheet';
+            link.href = `https://fonts.googleapis.com/css2?family=${fontSlug}:ital,wght@0,400;0,700;1,400;1,700&display=swap`;
+            document.head.appendChild(link);
+        }
+
+        setFontStatus('loading', `Loading font "${fontName}"…`);
+
+        document.fonts.load(`16px "${fontName}"`).then(() => {
+            clearFontStatus();
+            activeFontFamily = `"${fontName}", sans-serif`;
+            drawCanvas();
+        }).catch(() => {
+            setFontStatus('error', `Couldn't load the font "${fontName}" — check the name/URL and try again.`);
+            activeFontFamily = `"${fontName}", sans-serif`;
+            drawCanvas();
+        });
+    }
+
+    function handleFontChange() {
+        const fontVal = document.getElementById('fontSelect').value;
+        document.getElementById('fontUrlInput').value = '';
+
+        if (fontVal.includes(',')) {
+            activeFontFamily = fontVal;
+            drawCanvas();
+        } else {
+            fetchAndApplyGoogleFont(fontVal);
+        }
+    }
+
+    function loadCustomGoogleFont() {
+        const rawUrl = document.getElementById('fontUrlInput').value.trim();
+        if (!rawUrl) return;
+
+        let fontName = '';
+
+        if (rawUrl.includes('fonts.google.com/specimen/')) {
+            const parts = rawUrl.split('/specimen/');
+            if (parts[1]) {
+                fontName = parts[1].split('?')[0].replace(/\+/g, ' ');
+            }
+        } else if (rawUrl.includes('family=')) {
+            const match = rawUrl.match(/family=([^&:]+)/);
+            if (match && match[1]) {
+                fontName = match[1].replace(/\+/g, ' ');
+            }
+        } else {
+            fontName = rawUrl;
+        }
+
+        if (fontName) {
+            fetchAndApplyGoogleFont(fontName);
+        }
+    }
+
+    document.getElementById('bgUpload').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            customUploadUrl = URL.createObjectURL(file);
+            drawCanvas();
+        }
+    });
+
+    function handleDropdownChange() {
+        document.getElementById('bgUpload').value = "";
+        customUploadUrl = null;
+        drawCanvas();
+    }
+
+    function drawImageCover(ctx, img, canvasWidth, canvasHeight) {
+        const imgRatio = img.width / img.height;
+        const canvasRatio = canvasWidth / canvasHeight;
+        let drawWidth, drawHeight, offsetX, offsetY;
+
+        if (imgRatio > canvasRatio) {
+            drawHeight = canvasHeight;
+            drawWidth = img.width * (canvasHeight / img.height);
+            offsetX = (canvasWidth - drawWidth) / 2;
+            offsetY = 0;
+        } else {
+            drawWidth = canvasWidth;
+            drawHeight = img.height * (canvasWidth / img.width);
+            offsetX = 0;
+            offsetY = (canvasHeight - drawHeight) / 2;
+        }
+        ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+    }
+
+    function drawDynamicText(ctx, text, x, y, maxWidth, maxHeight, fontTemplate, startFontSize, align) {
+        let fontSize = startFontSize;
+        let lines = [];
+        let lineHeight;
+
+        while (fontSize >= 24) {
+            ctx.font = fontTemplate.replace('{size}', fontSize);
+            lineHeight = fontSize * 1.4;
+            lines = [];
+            let words = text.split(' ');
+            let line = '';
+
+            for (let n = 0; n < words.length; n++) {
+                let testLine = line + words[n] + ' ';
+                if (ctx.measureText(testLine).width > maxWidth && n > 0) {
+                    lines.push(line.trim());
+                    line = words[n] + ' ';
+                } else {
+                    line = testLine;
+                }
+            }
+            lines.push(line.trim());
+
+            if (lines.length * lineHeight <= maxHeight) break;
+            fontSize -= 2;
+        }
+
+        ctx.textAlign = align;
+        let startY = y - ((lines.length - 1) * lineHeight) / 2;
+        for (let i = 0; i < lines.length; i++) {
+            ctx.fillText(lines[i], x, startY + (i * lineHeight));
+        }
+        return startY + (lines.length * lineHeight);
+    }
+
+    function drawCanvas() {
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        const quoteText = document.getElementById('quoteText').value.trim() || "Enter your quote...";
+        const authorName = document.getElementById('authorName').value.trim();
+        const dimKey = document.getElementById('dimensionSelect').value;
+        const palKey = document.getElementById('paletteSelect').value;
+        const layout = document.getElementById('layoutSelect').value;
+        const bgSelect = document.getElementById('bgSelect').value;
+        const urlInput = document.getElementById('urlInput').value.trim();
+        const opacityPct = document.getElementById('overlayOpacity').value / 100;
+
+        const dim = dimensions[dimKey];
+        const palette = palettes[palKey] || palettes['none'];
+
+        // Determine text color (Picker vs Palette default)
+        const textColorMode = document.getElementById('textColorMode').value;
+        const activeTextColor = textColorMode === 'custom' 
+            ? document.getElementById('textColorPicker').value 
+            : palette.text;
+        
+        canvas.width = dim.w;
+        canvas.height = dim.h;
+
+        let activeImageUrl = urlInput || customUploadUrl || bgSelect;
+        const bgStatus = document.getElementById('bgStatus');
+
+        if (activeImageUrl) {
+            setBgStatus('loading', 'Loading background image…');
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.onload = function() {
+                clearBgStatus();
+                drawImageCover(ctx, img, canvas.width, canvas.height);
+                
+                // Draw Overlay Color scaled by Opacity slider percentage
+                ctx.fillStyle = `rgba(${palette.bg}, ${opacityPct})`;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                renderTextElements(ctx, canvas, quoteText, authorName, layout, palette, activeTextColor);
+            };
+            img.onerror = function() {
+                // Most common cause: the source doesn't allow cross-origin loading,
+                // which is required so the canvas can be exported/downloaded.
+                if (urlInput) {
+                    setBgStatus('error', "Couldn't load that image — the site it's hosted on doesn't allow it to be used here. Try uploading the image as a file instead.");
+                } else {
+                    setBgStatus('error', "Couldn't load that background image. Falling back to a solid color.");
+                }
+                ctx.fillStyle = '#222';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                renderTextElements(ctx, canvas, quoteText, authorName, layout, palette, activeTextColor);
+            };
+            img.src = activeImageUrl;
+        } else {
+            clearBgStatus();
+        }
+    }
+
+    function setBgStatus(kind, message) {
+        const bgStatus = document.getElementById('bgStatus');
+        bgStatus.textContent = message;
+        bgStatus.className = 'bg-status ' + (kind === 'loading' ? 'is-loading' : 'is-error');
+        bgStatus.style.display = 'block';
+    }
+
+    function clearBgStatus() {
+        const bgStatus = document.getElementById('bgStatus');
+        bgStatus.style.display = 'none';
+        bgStatus.textContent = '';
+    }
+
+    function setFontStatus(kind, message) {
+        const fontStatus = document.getElementById('fontStatus');
+        fontStatus.textContent = message;
+        fontStatus.className = 'bg-status ' + (kind === 'loading' ? 'is-loading' : 'is-error');
+        fontStatus.style.display = 'block';
+    }
+
+    function clearFontStatus() {
+        const fontStatus = document.getElementById('fontStatus');
+        fontStatus.style.display = 'none';
+        fontStatus.textContent = '';
+    }
+
+    function renderTextElements(ctx, canvas, quoteText, authorName, layout, colors, textColor) {
+        const fontSizeScale = document.getElementById('fontSizeScale').value / 100;
+        const startFontSize = Math.floor(canvas.width * 0.08 * fontSizeScale); 
+        const padding = canvas.width * 0.12;
+        const maxWidth = canvas.width - (padding * 2);
+        const maxTextHeight = canvas.height * 0.50; 
+        let bottomOfTextY = 0;
+
+        const authorGap = Math.max(30, canvas.height * 0.06);
+
+        if (layout === 'minimalist') {
+            ctx.fillStyle = textColor;
+            bottomOfTextY = drawDynamicText(ctx, `"${quoteText}"`, canvas.width / 2, canvas.height / 2.2, maxWidth, maxTextHeight, `500 {size}px ${activeFontFamily}`, startFontSize, 'center');
+
+            if (authorName) {
+                ctx.fillStyle = colors.author;
+                ctx.font = `600 ${startFontSize * 0.4}px ${activeFontFamily}`;
+                ctx.fillText(`— ${authorName}`, canvas.width / 2, bottomOfTextY + authorGap); 
+            }
+
+        } else if (layout === 'bold') {
+            ctx.font = `bold ${startFontSize * 5}px ${activeFontFamily}`;
+            ctx.fillStyle = colors.accent;
+            ctx.globalAlpha = 0.3;
+            ctx.fillText('"', padding - 40, padding + (startFontSize * 2));
+            ctx.globalAlpha = 1.0;
+
+            ctx.fillStyle = colors.accent;
+            ctx.fillRect(padding - 40, canvas.height/4, 15, canvas.height/2);
+
+            ctx.fillStyle = textColor;
+            bottomOfTextY = drawDynamicText(ctx, quoteText, padding, canvas.height / 2.2, maxWidth, maxTextHeight, `bold {size}px ${activeFontFamily}`, startFontSize, 'left');
+
+            if (authorName) {
+                ctx.fillStyle = colors.author;
+                ctx.font = `bold ${startFontSize * 0.45}px ${activeFontFamily}`;
+                ctx.fillText(authorName.toUpperCase(), padding, bottomOfTextY + authorGap);
+            }
+
+        } else if (layout === 'elegant') {
+            ctx.strokeStyle = colors.accent;
+            ctx.lineWidth = 4;
+            ctx.strokeRect(40, 40, canvas.width - 80, canvas.height - 80);
+
+            ctx.fillStyle = textColor;
+            bottomOfTextY = drawDynamicText(ctx, `"${quoteText}"`, canvas.width / 2, canvas.height / 2.2, maxWidth, maxTextHeight, `italic {size}px ${activeFontFamily}`, startFontSize, 'center');
+            
+            if (authorName) {
+                ctx.fillStyle = colors.author;
+                ctx.font = `normal ${startFontSize * 0.4}px ${activeFontFamily}`;
+                ctx.fillText(authorName, canvas.width / 2, bottomOfTextY + authorGap);
+            }
+        }
+
+        ctx.textAlign = 'center';
+        const wmSize = Math.max(16, Math.min(26, canvas.width * 0.022));
+        ctx.font = `500 ${wmSize}px ${activeFontFamily}`;
+        ctx.fillStyle = colors.wm;
+        
+        const watermarkBottomPadding = Math.max(30, canvas.height * 0.06);
+        ctx.fillText("QUOTESTHATMATTER.COM", canvas.width / 2, canvas.height - watermarkBottomPadding);
+
+        document.getElementById('previewImage').src = canvas.toDataURL('image/png');
+    }
+
+    function downloadImage() {
+        const canvas = document.getElementById('canvas');
+        const mimeType = document.getElementById('formatSelect').value;
+        const ext = mimeType === 'image/png' ? 'png' : (mimeType === 'image/jpeg' ? 'jpg' : 'webp');
+        const quality = mimeType === 'image/png' ? undefined : 0.92;
+
+        try {
+            canvas.toBlob(function(blob) {
+                if (!blob) {
+                    // Some older browsers (notably older Safari) don't support WebP export.
+                    // Fall back to PNG so the download never silently fails.
+                    canvas.toBlob(function(pngBlob) {
+                        triggerDownload(pngBlob, 'quotesthatmatter.png');
+                    }, 'image/png');
+                    return;
+                }
+                triggerDownload(blob, `quotesthatmatter.${ext}`);
+            }, mimeType, quality);
+        } catch (err) {
+            // Canvas is "tainted" by a cross-origin background image that loaded
+            // but doesn't allow its pixels to be read back out for export.
+            setBgStatus('error', "This image can't be downloaded because of how its source site restricts it. Try uploading it as a file instead, or pick a different background.");
+        }
+    }
+
+    function triggerDownload(blob, filename) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+
+    function prefillFromUrlParams() {
+        const params = new URLSearchParams(window.location.search);
+        const quote = params.get('quote');
+        const author = params.get('author');
+        if (quote) document.getElementById('quoteText').value = quote;
+        if (author) document.getElementById('authorName').value = author;
+    }
+
+    function saveFormatPreference() {
+        try {
+            localStorage.setItem('qtm_download_format', document.getElementById('formatSelect').value);
+        } catch (e) {
+            // localStorage unavailable (private browsing etc.) — not critical, just skip remembering.
+        }
+    }
+
+    function restoreFormatPreference() {
+        try {
+            const saved = localStorage.getItem('qtm_download_format');
+            if (saved) document.getElementById('formatSelect').value = saved;
+        } catch (e) {
+            // ignore
+        }
+    }
+
+    window.onload = function() {
+        restoreFormatPreference();
+        prefillFromUrlParams();
+        drawCanvas();
+    };
+</script>
+</body>
+</html>

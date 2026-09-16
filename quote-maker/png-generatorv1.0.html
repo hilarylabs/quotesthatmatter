@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Quote Maker & Generator | QuotesThatMatter.com</title>
+    <meta name="description" content="Free online quote maker. Create beautiful, shareable quotes for social media with custom backgrounds and professional layouts in seconds.">
+    <meta name="robots" content="index, follow">
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Free Quote Maker & Image Generator" />
+	<meta property="og:description" content="Design and download beautiful quote images for Instagram, Facebook, and Pinterest in seconds. Completely free and private." />
+	<meta property="og:url" content="https://quotesthatmatter.com/quote-maker/png-generator.html" />
+	<meta property="og:site_name" content="Quotes That Matter" />
+	<meta property="og:image" content="https://quotesthatmatter.com/img/logo/maker-logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+	<meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Quote Maker & Image Generator" />
+    <meta name="twitter:description" content="Design and download beautiful quote images for social media instantly." />
+    <meta name="twitter:image" content="https://quotesthatmatter.com/img/logo/maker-logo.png" />
+	
+    <link rel="icon" type="image/x-icon" href="/img/logo/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/logo/favicon-32x32.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "QuotesThatMatter Quote Maker",
+  "url": "https://quotesthatmatter.com/quote-maker/png-generator.html",
+  "description": "A free browser-based graphic design tool to quickly generate elegant quote images for social media platforms like Instagram, Facebook, and Pinterest.",
+  "applicationCategory": "MultimediaApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript and HTML5 Canvas support.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0.00",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "QuotesThatMatter",
+    "url": "https://quotesthatmatter.com"
+  }
+}
+</script>
+
+   <style>
+        :root { --bg: #f4f4f9;
+		        --primary-color: #E67E43;
+		}
+		
+        /* ---- HEADER ---- */
+        header {
+			text-align: center;
+			margin-bottom: 3rem;
+			position: relative;
+			padding-top: 1.5rem;
+			margin-left: auto;
+			margin-right: auto;
+			}
+
+        .logo-main {
+
+            font-size: 4rem;
+            color: var(--primary-color);
+            font-weight: 400;
+            line-height: 1;
+            margin-bottom: 0.2rem;
+            letter-spacing: -1px;
+        }
+
+        .logo-sub {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+		
+		.logo-main a {
+            text-decoration: none;
+            color: inherit;
+}
+
+        header::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent-muted);
+            margin: 1.5rem auto 0;
+            border-radius: 2px;
+        }
+		
+		 header a.logo-link {
+            text-decoration: none;
+        }
+
+        /* ---- NAV ---- */
+        nav {
+			text-align: center;
+			margin-top: 1.5rem;
+			}
+
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 0.2rem 0;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 5px;
+            text-decoration-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        nav span.sep {
+			color: var(--accent-muted);
+			margin: 0 0.6rem;
+			font-size: 0.7rem;
+			}
+		
+
+       .page-maker {
+			font-size: 2.5rem;
+			color: var(--primary-color);
+			font-weight: 500;
+			line-height: 1;
+			width: 100%;
+			text-align: center; 
+			letter-spacing: -1px;
+			margin: 0 0 20px 0;
+		}
+
+        body {
+			font-family: system-ui, -apple-system, sans-serif;
+			background-color: var(--bg);
+			margin: 0; padding: 40px 20px;
+			display: flex;
+			justify-content: center;
+			}
+			
+        .app-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 30px; max-width: 1000px;
+			width: 100%;
+			}
+			
+        .controls {
+			flex: 1;
+			min-width: 300px;
+			background: white;
+			padding: 10px;
+			border-radius: 12px;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+			}
+			
+        .preview-area {
+			flex: 1;
+			min-width: 300px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			}
+		
+        .form-group {
+			margin-bottom: 15px;
+			}
+			
+        label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: 600;
+			font-size: 14px;
+			color: #333;
+			}
+			
+        input, textarea, select {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			box-sizing: border-box;
+			font-family: inherit;
+			}
+		
+        canvas {
+			display: none;
+			}
+        #previewImage {
+			max-width: 100%;
+			height: auto;
+			border-radius: 8px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+			transition: all 0.3s ease;
+			}
+			
+        .btn-download {
+			margin-top: 20px;
+			background-color: #28a745;
+			color: white;
+			text-decoration: none;
+			padding: 12px 24px;
+			border-radius: 6px;
+			font-weight: bold;
+			display: inline-block;
+			text-align: center;
+			width: 100%;
+			box-sizing: border-box;
+			}
+			
+        .btn-download:hover {
+			background-color: #218838;
+			}
+			
+        .upload-section {
+			background: #f8f9fa;
+			padding: 15px;
+			border-radius: 8px;
+			border: 1px dashed #ccc;
+			margin-top: 10px;
+			}
+			
+        .upload-section label {
+			font-size: 13px;
+			color: #555;
+			}
+			
+/* ---- FOOTER ---- */
+.footer {
+    text-align: center;
+    margin-top: 4rem;      /* Gave it a little more breathing room from the app container */
+    padding-top: 2rem;
+    width: 100%;           /* Ensures it takes up the full width to align perfectly */
+    clear: both;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    color: #857469;        /* Swapped out the unassigned variable for a solid neutral tone */
+    letter-spacing: 0.5px;
+}
+        @media (max-width: 600px) {
+            .logo-main { font-size: 3rem; }
+            nav a { font-size: 0.7rem; }
+            nav span.sep { margin: 0 0.35rem; }
+            .quote-body { padding: 1.5rem 1.5rem 1rem; }
+            .quote-body p { font-size: 1.2rem; }
+            .quote-actions { padding: 0.65rem 1.5rem; }
+        }
+		
+    </style>
+	
+</head>
+<body>
+<div class="app-container">
+    <header>
+	<a href="/" class="logo-link">
+        <span class="logo-main">Quotes</span>
+        <div class="logo-sub">That Matter</div></a>
+        <nav aria-label="Main navigation">
+            <a href="/stoic/authors.html">Stoic</a><span class="sep">•</span>
+            <a href="/mindset/authors.html">Mindset</a><span class="sep">•</span>
+            <a href="/resilience/authors.html">Resilience</a><span class="sep">•</span>
+            <a href="/time/authors.html">Time</a><span class="sep">•</span>
+            <a href="/leadership/authors.html">Leadership</a><span class="sep">•</span>
+            <a href="/relationship/authors.html">Relationship</a><span class="sep">•</span>
+            <a href="/articles/">Articles</a><span class="sep">•</span>
+			<a href="/quote-maker/png-generator.html" class="active">Quote Maker</a>
+        </nav>
+    </header>
+
+<div class ="page-maker">
+<h1 class="page-maker">Free Quote Maker & Generator</h1>
+</div>
+
+    <div class="controls">
+        <h2>Quote Builder</h2>
+        <div class="form-group">
+            <label>Quote Text</label>
+            <textarea id="quoteText" rows="3" oninput="drawCanvas()">The secret of getting ahead is getting started.</textarea>
+        </div>
+        <div class="form-group">
+            <label>Author Name</label>
+            <input type="text" id="authorName" value="Mark Twain" oninput="drawCanvas()">
+        </div>
+        
+        <div class="form-group">
+            <label>Background Image</label>
+            <select id="bgSelect" onchange="handleDropdownChange()">
+                <option value="none">None (Solid Color)</option>
+                <option value="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjExMTN8MHwxfHNlYXJjaHwxfHxuYXR1cmV8ZW58MHx8fHwxNjk5OTMzMzAwfDA&ixlib=rb-4.0.3&q=80&w=1080">Nature Forest</option>
+                <option value="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjExMTN8MHwxfHNlYXJjaHwxfHxiZWFjaHxlbnwwfHx8fDE2OTk5MzM1MzR8MA&ixlib=rb-4.0.3&q=80&w=1080">Sunny Beach</option>
+                <option value="https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjExMTN8MHwxfHNlYXJjaHwxfHxzcGFjZXxlbnwwfHx8fDE2OTk5MzM1NDh8MA&ixlib=rb-4.0.3&q=80&w=1080">Deep Space</option>
+            </select>
+            
+            <div class="upload-section">
+                <label>Upload Your Own:</label>
+                <input type="file" id="bgUpload" accept="image/*">
+            </div>
+        </div>
+		
+		<div class="form-group">
+    <label>Or Paste Image URL:</label>
+    <input type="text" id="urlInput" placeholder="https://example.com/image.jpg" oninput="drawCanvas()">
+</div>
+
+        <div class="form-group">
+            <label>Dimensions</label>
+            <select id="dimensionSelect" onchange="drawCanvas()">
+                <option value="insta_sq">Instagram Square (1080x1080)</option>
+                <option value="insta_st">Instagram Story (1080x1920)</option>
+                <option value="fb_post">Facebook Post (1200x630)</option>
+                <option value="pinterest">Pinterest Pin (1000x1500)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Color Palette (Text & Accents)</label>
+            <select id="paletteSelect" onchange="drawCanvas()">
+                <option value="cream">Cream</option>
+                <option value="dark">Dark</option>
+                <option value="terracotta">Terracotta</option>
+                <option value="sage">Sage</option>
+                <option value="midnight">Midnight</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Layout Style</label>
+            <select id="layoutSelect" onchange="drawCanvas()">
+                <option value="minimalist">Minimalist (Centered)</option>
+                <option value="bold">Bold (Left-Aligned)</option>
+                <option value="elegant">Elegant (Serif Bordered)</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="preview-area">
+        <canvas id="canvas"></canvas>
+        <img id="previewImage" src="" alt="Quote Preview">
+        <a id="downloadBtn" href="#" download="quotesthatmatter.png" class="btn-download">Download Image</a>
+    </div>
+	<div class="footer"><p>&copy; 2026 QuotesThatMatter.com. All rights reserved.</p>
+	<p>Free Quote Maker & Generator v1.0</p>
+	</div></div>
+
+
+<script>
+    const palettes = {
+        cream:      { bg:'#FDFBF4', text:'#33221A', author:'#E67E43', wm:'#686962', accent:'#E67E43', overlay: 'rgba(253, 251, 244, 0.75)' },
+        dark:       { bg:'#1a1008', text:'#F5F0E8', author:'#E67E43', wm:'#857469', accent:'#E67E43', overlay: 'rgba(26, 16, 8, 0.75)' },
+        terracotta: { bg:'#C05621', text:'#FDFBF4', author:'#FDFBF4', wm:'rgba(255,255,255,0.5)', accent:'#FDFBF4', overlay: 'rgba(192, 86, 33, 0.75)' },
+        sage:       { bg:'#8a9a7a', text:'#1C2416', author:'#FDFBF4', wm:'rgba(255,255,255,0.5)', accent:'#FDFBF4', overlay: 'rgba(138, 154, 122, 0.75)' },
+        midnight:   { bg:'#1a2035', text:'#E8E0D0', author:'#E67E43', wm:'#6E7694', accent:'#E67E43', overlay: 'rgba(26, 32, 53, 0.75)' }
+    };
+
+    const dimensions = {
+        insta_sq:  { w: 1080, h: 1080 },
+        insta_st:  { w: 1080, h: 1920 },
+        fb_post:   { w: 1200, h: 630 },
+        pinterest: { w: 1000, h: 1500 }
+    };
+
+    let customUploadUrl = null;
+
+    document.getElementById('bgUpload').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            document.getElementById('bgSelect').value = "none";
+            customUploadUrl = URL.createObjectURL(file);
+            drawCanvas();
+        }
+    });
+
+    function handleDropdownChange() {
+        document.getElementById('bgUpload').value = "";
+        customUploadUrl = null;
+        drawCanvas();
+    }
+
+    function drawImageCover(ctx, img, canvasWidth, canvasHeight) {
+        const imgRatio = img.width / img.height;
+        const canvasRatio = canvasWidth / canvasHeight;
+        let drawWidth, drawHeight, offsetX, offsetY;
+
+        if (imgRatio > canvasRatio) {
+            drawHeight = canvasHeight;
+            drawWidth = img.width * (canvasHeight / img.height);
+            offsetX = (canvasWidth - drawWidth) / 2;
+            offsetY = 0;
+        } else {
+            drawWidth = canvasWidth;
+            drawHeight = img.height * (canvasWidth / img.width);
+            offsetX = 0;
+            offsetY = (canvasHeight - drawHeight) / 2;
+        }
+        ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+    }
+
+    function drawDynamicText(ctx, text, x, y, maxWidth, maxHeight, fontTemplate, startFontSize, align) {
+        let fontSize = startFontSize;
+        let lines = [];
+        let lineHeight;
+
+        while (fontSize >= 24) {
+            ctx.font = fontTemplate.replace('{size}', fontSize);
+            lineHeight = fontSize * 1.4;
+            lines = [];
+            let words = text.split(' ');
+            let line = '';
+
+            for (let n = 0; n < words.length; n++) {
+                let testLine = line + words[n] + ' ';
+                if (ctx.measureText(testLine).width > maxWidth && n > 0) {
+                    lines.push(line.trim());
+                    line = words[n] + ' ';
+                } else {
+                    line = testLine;
+                }
+            }
+            lines.push(line.trim());
+
+            if (lines.length * lineHeight <= maxHeight) break;
+            fontSize -= 2;
+        }
+
+        ctx.textAlign = align;
+        let startY = y - ((lines.length - 1) * lineHeight) / 2;
+        for (let i = 0; i < lines.length; i++) {
+            ctx.fillText(lines[i], x, startY + (i * lineHeight));
+        }
+        return startY + (lines.length * lineHeight);
+    }
+
+function drawCanvas() {
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    const quoteText = document.getElementById('quoteText').value.trim() || "Enter your quote...";
+    const authorName = document.getElementById('authorName').value.trim();
+    const dimKey = document.getElementById('dimensionSelect').value;
+    const palKey = document.getElementById('paletteSelect').value;
+    const layout = document.getElementById('layoutSelect').value;
+    const bgSelect = document.getElementById('bgSelect').value;
+    const urlInput = document.getElementById('urlInput').value.trim(); // New Input
+
+    const dim = dimensions[dimKey];
+    const colors = palettes[palKey];
+    
+    canvas.width = dim.w;
+    canvas.height = dim.h;
+
+    // PRIORITY ORDER: 1. Paste URL, 2. Uploaded, 3. Dropdown
+    let activeImageUrl = urlInput || customUploadUrl;
+    if (!activeImageUrl && bgSelect !== 'none') {
+        activeImageUrl = bgSelect;
+    }
+
+    if (activeImageUrl) {
+        const img = new Image();
+        img.crossOrigin = "anonymous"; // This tries to bypass standard CORS blocks
+        img.onload = function() {
+            drawImageCover(ctx, img, canvas.width, canvas.height);
+            ctx.fillStyle = colors.overlay;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            renderTextElements(ctx, canvas, quoteText, authorName, colors, layout);
+        };
+        img.onerror = function() {
+            alert("Could not load image. The website might be blocking external access (CORS).");
+        };
+        img.src = activeImageUrl;
+    } else {
+        ctx.fillStyle = colors.bg;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        renderTextElements(ctx, canvas, quoteText, authorName, colors, layout);
+    }
+}
+
+    function renderTextElements(ctx, canvas, quoteText, authorName, colors, layout) {
+        const startFontSize = Math.floor(canvas.width * 0.08); 
+        const padding = canvas.width * 0.12;
+        const maxWidth = canvas.width - (padding * 2);
+        
+        // Slightly reduced max text height to leave more safe room for the author
+        const maxTextHeight = canvas.height * 0.50; 
+        let bottomOfTextY = 0;
+
+        // NEW: Calculate dynamic gap so it scales well on short (FB) and tall (Story) posts
+        const authorGap = Math.max(30, canvas.height * 0.06);
+
+        if (layout === 'minimalist') {
+            ctx.fillStyle = colors.text;
+            bottomOfTextY = drawDynamicText(ctx, `"${quoteText}"`, canvas.width / 2, canvas.height / 2.2, maxWidth, maxTextHeight, `500 {size}px system-ui, sans-serif`, startFontSize, 'center');
+
+            if (authorName) {
+                ctx.fillStyle = colors.author;
+                ctx.font = `600 ${startFontSize * 0.4}px system-ui, sans-serif`;
+                ctx.fillText(`— ${authorName}`, canvas.width / 2, bottomOfTextY + authorGap); 
+            }
+
+        } else if (layout === 'bold') {
+            ctx.font = `bold ${startFontSize * 5}px system-ui, sans-serif`;
+            ctx.fillStyle = colors.accent;
+            ctx.globalAlpha = 0.15;
+            ctx.fillText('"', padding - 40, padding + (startFontSize * 2));
+            ctx.globalAlpha = 1.0;
+
+            ctx.fillStyle = colors.accent;
+            ctx.fillRect(padding - 40, canvas.height/4, 15, canvas.height/2);
+
+            ctx.fillStyle = colors.text;
+            bottomOfTextY = drawDynamicText(ctx, quoteText, padding, canvas.height / 2.2, maxWidth, maxTextHeight, `bold {size}px system-ui, sans-serif`, startFontSize, 'left');
+
+            if (authorName) {
+                ctx.fillStyle = colors.author;
+                ctx.font = `bold ${startFontSize * 0.45}px system-ui, sans-serif`;
+                ctx.fillText(authorName.toUpperCase(), padding, bottomOfTextY + authorGap);
+            }
+
+        } else if (layout === 'elegant') {
+            ctx.strokeStyle = colors.accent;
+            ctx.lineWidth = 4;
+            ctx.strokeRect(40, 40, canvas.width - 80, canvas.height - 80);
+
+            ctx.fillStyle = colors.text;
+            bottomOfTextY = drawDynamicText(ctx, `"${quoteText}"`, canvas.width / 2, canvas.height / 2.2, maxWidth, maxTextHeight, `italic {size}px Georgia, serif`, startFontSize, 'center');
+            
+            if (authorName) {
+                ctx.fillStyle = colors.author;
+                ctx.font = `normal ${startFontSize * 0.4}px Georgia, serif`;
+                ctx.fillText(authorName, canvas.width / 2, bottomOfTextY + authorGap);
+            }
+        }
+
+        ctx.textAlign = 'center';
+        // Make sure watermark font size doesn't get too big on wide screens
+        const wmSize = Math.max(16, Math.min(26, canvas.width * 0.022));
+        ctx.font = `500 ${wmSize}px system-ui, sans-serif`;
+        ctx.fillStyle = colors.wm;
+        
+        // NEW: Anchor the watermark to the bottom edge using canvas.height math
+        const watermarkBottomPadding = Math.max(30, canvas.height * 0.06);
+        ctx.fillText("QUOTESTHATMATTER.COM", canvas.width / 2, canvas.height - watermarkBottomPadding);
+
+        const dataUrl = canvas.toDataURL('image/png');
+        document.getElementById('previewImage').src = dataUrl;
+        document.getElementById('downloadBtn').href = dataUrl;
+    }
+
+    window.onload = drawCanvas;
+
+</script>
+</body>
+</html>

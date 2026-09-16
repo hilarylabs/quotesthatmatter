@@ -1,0 +1,40 @@
+# ----------------------------------------------------
+# STEP 1: ALLOW BOTH GOOGLE AND AI SEARCH (FOR TRAFFIC)
+# ----------------------------------------------------
+User-agent: *
+Allow: /
+
+# Explicitly open the door for ChatGPT Search traffic
+User-agent: OAI-SearchBot
+Allow: /
+
+# Explicitly open the door for Perplexity Search traffic
+User-agent: PerplexityBot
+Allow: /
+
+# ----------------------------------------------------
+# STEP 2: BLOCK BACKGROUND AI TRAINING (TO PROTECT DATA)
+# ----------------------------------------------------
+
+# Blocks ChatGPT from scraping your site for model training
+User-agent: GPTBot
+Disallow: /
+
+# Blocks Claude from scraping your site for model training
+User-agent: ClaudeBot
+Disallow: /
+
+# Blocks Gemini from using your content for training (Zero impact on Google Search)
+User-agent: Google-Extended
+Disallow: /
+
+# Blocks Apple Intelligence from training on your text
+User-agent: Applebot-Extended
+Disallow: /
+
+# Blocks general data harvesters used by smaller AI startups
+User-agent: CCBot
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://quotesthatmatter.com/sitemap.xml
