@@ -6,13 +6,10 @@
     <title>Favourite Authors | Quotes That Matter</title>
     <meta name="description" content="Explore wisdom by favourite authors like Marcus Aurelius, Epictetus,Oscar Wilde, Steve Jobs and more because the right quote at the right time can change everything.">
     <meta name="robots" content="index, follow">
-	<link rel="canonical" href="https://quotesthatmatter.com/author/index.html">
-
-	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="Quotes That Matter">
-    <meta property="og:title" content="Favourite Authors Quotes | Quotes That Matter">
+    <meta property="og:title" content="Favourite AuthorsQuotes | Quotes That Matter">
     <meta property="og:description" content="Explore wisdom by favourite authors like Marcus Aurelius, Epictetus,Oscar Wilde, Steve Jobs and more because the right quote at the right time can change everything.">
     <meta property="og:url" content="https://quotesthatmatter.com/author/index.html">
+    <meta property="og:site_name" content="Quotes That Matter">
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -260,27 +257,78 @@
         }
 
 
-        /* ---- AUTHOR GRID ---- */
-        .author-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.1rem 1.5rem;
-            margin-bottom: 4rem;
+        /* ---- AUTHOR GRID (grouped by letter, flowing columns) ---- */
+        .author-columns {
+            column-count: 3;
+            column-gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .letter-group {
+            break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            margin-bottom: 2rem;
+        }
+
+        .letter-heading {
+            font-family: 'Libertinus Math', Georgia, serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--author-card);
+            margin-bottom: 0.5rem;
+        }
+
+        .letter-divider {
+            border: none;
+            border-top: 1px solid var(--border-soft);
+            margin-bottom: 0.7rem;
+        }
+
+        .author-list-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
         }
 
         .author-card {
-            text-decoration: underline;
+            text-decoration: none;
             color: var(--author-card);
             font-family: 'Libertinus Math', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 500;
             letter-spacing: 0.2px;
-            padding: 0.1rem 0.3rem;
             transition: color 0.2s ease;
         }
 
         .author-card:hover {
             color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        .no-authors {
+            font-size: 0.95rem;
+            font-style: italic;
+            color: var(--accent-muted);
+            margin-bottom: 0.7rem;
+        }
+
+        .more-btn {
+            display: inline-block;
+            margin-top: 0.8rem;
+            padding: 0.5rem 1.1rem;
+            background-color: var(--primary-color);
+            color: #fff;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: opacity 0.15s ease;
+        }
+
+        .more-btn:hover {
+            opacity: 0.88;
         }
 
         /* ---- HASHTAG CTA ---- */
@@ -322,15 +370,18 @@
 		.footer-links .sep { color: var(--accent-muted); margin: 0 0.3rem; }
 
         /* ---- RESPONSIVE ---- */
+        @media (max-width: 700px) {
+            .author-columns { column-count: 2; column-gap: 1.8rem; }
+        }
+
         @media (max-width: 600px) {
             .logo-main { font-size: 3rem; }
-            .author-grid { gap: 0.6rem 1rem; }
             nav a { font-size: 0.7rem; }
             nav span.sep { margin: 0 0.35rem; }
         }
 
-        @media (max-width: 400px) {
-            .author-grid { grid-template-columns: repeat(2, 1fr); }
+        @media (max-width: 440px) {
+            .author-columns { column-count: 1; }
         }
     </style>
 </head>
@@ -350,7 +401,7 @@
             <nav aria-label="Main navigation" id="mainNav">
                 <a href="/author/index.html">Authors</a>
                 <a href="/topics/index.html">Topics</a>
-                <a href="/books/index.html">Books</a>
+                <a href="/books/index.html">Book</a>
                 <a href="/articles/">Articles</a>
                 <a href="/quote-maker/index.html" class="image-gen">Quote Maker</a>
             </nav>
@@ -360,51 +411,251 @@
         <main>
             <div class="page-intro">
                 <div class="breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp;<a href="/author/authors.html"> Authors</a></div>
-                <h1 class="page-title">Explore Authors</h1>
+                <h1 class="page-title">Authors</h1>
             </div>
  <p class="page-desc">Explore wisdom by favourite authors like Marcus Aurelius, Epictetus,Oscar Wilde, Steve Jobs and more because the right quote at the right time can change everything.</p><br>
  <p class="page-desc">Read a line from your favourite author and sit with it for a second longer than you normally would. It might change your perspectives.</p><br>
 
 <p>Explore wisdoms by author, create a beautiful quote image instantly using our <a href="/quote-maker/index.html" target="_blank" style="text-decoration:none; color:var(--author-card);">Quote Image Generator</a> and upload to your social media in seconds!</p><br>
 
-            <div class="author-grid">
-                <a href="/author/alexander-the-great.html" class="author-card">Alexander the Great</a>
-				<a href="/author/alain-de-botton.html" class="author-card">Alain de Botton</a>
-				<a href="/author/albert-einstein.html" class="author-card">Albert Einstein</a>
-				<a href="/author/buddha.html" class="author-card">Buddha</a>
-				<a href="/author/cicero.html" class="author-card">Cicero</a>		 
-                <a href="/author/marcus-aurelius.html" class="author-card">Marcus Aurelius</a>
-                <a href="/author/seneca.html" class="author-card">Seneca the Younger</a>
-                <a href="/author/epictetus.html" class="author-card">Epictetus</a>
-				<a href="/author/david-goggins.html" class="author-card">David Goggins</a>
-				<a href="/author/dale-carnegie.html" class="author-card">Dale Carnegie</a>
-				<a href="/author/finn-juhl.html" class="author-card">Finn Juhl</a>
-				<a href="/author/george-orwell.html" class="author-card">George Orwell</a>
-				<a href="/author/harry-s-truman.html" class="author-card">Harry S. Truman</a>
-				<a href="/author/henry-david-thoreau.html" class="author-card">Henry David Thoreau</a>
-				<a href="/author/jocko-willink.html" class="author-card">Jocko Willink</a>
-				<a href="/author/khalil-gibran.html" class="author-card">Kahlil Gibran</a>
-				<a href="/author/leonardo-da-vinci.html" class="author-card">Leonardo da Vinci</a>
-				<a href="/author/lorraine-toussaint.html" class="author-card">Lorraine Toussaint</a>
-				<a href="/author/maya-angelou.html" class="author-card">Maya Angelou</a>
-				<a href="/author/marlon-riggs.html" class="author-card">Marlon Riggs</a>
-				<a href="/author/nelson-mandela.html" class="author-card">Nelson Mandela</a>
-                <a href="/author/oscar-wilde.html" class="author-card">Oscar Wilde</a>
-                <a href="/author/plutarch.html" class="author-card">Plutarch</a>
-                <a href="/author/plato.html" class="author-card">Plato</a>
-                <a href="/author/rumi.html" class="author-card">Rumi</a>
-                <a href="/author/sun-tzu.html" class="author-card">Sun Tzu</a>
-				<a href="/author/sam-ervin.html" class="author-card">Sam Ervin</a>
-				<a href="/author/simon-sinek.html" class="author-card">Simon Sinek</a>
-				<a href="/author/viktor-frankl.html" class="author-card">Viktor Frankl</a>
-                
+            <div class="author-columns">
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">A Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/alain-de-botton.html" class="author-card">Alain de Botton</a>
+                        <a href="/author/albert-einstein.html" class="author-card">Albert Einstein</a>
+                        <a href="/author/alexander-the-great.html" class="author-card">Alexander the Great</a>
+                    </div>
+                    <a href="/author/a/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">B Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/buddha.html" class="author-card">Buddha</a>
+                    </div>
+                    <a href="/author/b/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">C Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/cicero.html" class="author-card">Cicero</a>
+                    </div>
+                    <a href="/author/c/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">D Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/dale-carnegie.html" class="author-card">Dale Carnegie</a>
+                        <a href="/author/david-goggins.html" class="author-card">David Goggins</a>
+                    </div>
+                    <a href="/author/d/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">E Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/epictetus.html" class="author-card">Epictetus</a>
+                    </div>
+                    <a href="/author/e/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">F Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/finn-juhl.html" class="author-card">Finn Juhl</a>
+                    </div>
+                    <a href="/author/f/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">G Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/george-orwell.html" class="author-card">George Orwell</a>
+                    </div>
+                    <a href="/author/g/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">H Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/harry-s-truman.html" class="author-card">Harry S. Truman</a>
+                        <a href="/author/henry-david-thoreau.html" class="author-card">Henry David Thoreau</a>
+                    </div>
+                    <a href="/author/h/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">I Authors</h2>
+                    <hr class="letter-divider">
+                    <p class="no-authors">More authors coming soon.</p>
+                    <a href="/author/i/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">J Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/jocko-willink.html" class="author-card">Jocko Willink</a>
+                    </div>
+                    <a href="/author/j/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">K Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/khalil-gibran.html" class="author-card">Kahlil Gibran</a>
+                    </div>
+                    <a href="/author/k/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">L Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/leonardo-da-vinci.html" class="author-card">Leonardo da Vinci</a>
+                        <a href="/author/lorraine-toussaint.html" class="author-card">Lorraine Toussaint</a>
+                    </div>
+                    <a href="/author/l/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">M Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/marcus-aurelius.html" class="author-card">Marcus Aurelius</a>
+                        <a href="/author/marlon-riggs.html" class="author-card">Marlon Riggs</a>
+                        <a href="/author/maya-angelou.html" class="author-card">Maya Angelou</a>
+                    </div>
+                    <a href="/author/m/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">N Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/nelson-mandela.html" class="author-card">Nelson Mandela</a>
+                    </div>
+                    <a href="/author/n/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">O Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/oscar-wilde.html" class="author-card">Oscar Wilde</a>
+                    </div>
+                    <a href="/author/o/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">P Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/plato.html" class="author-card">Plato</a>
+                        <a href="/author/plutarch.html" class="author-card">Plutarch</a>
+                    </div>
+                    <a href="/author/p/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">Q Authors</h2>
+                    <hr class="letter-divider">
+                    <p class="no-authors">More authors coming soon.</p>
+                    <a href="/author/q/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">R Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/rumi.html" class="author-card">Rumi</a>
+                    </div>
+                    <a href="/author/r/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">S Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/sam-ervin.html" class="author-card">Sam Ervin</a>
+                        <a href="/author/seneca.html" class="author-card">Seneca the Younger</a>
+                        <a href="/author/simon-sinek.html" class="author-card">Simon Sinek</a>
+                        <a href="/author/sun-tzu.html" class="author-card">Sun Tzu</a>
+                    </div>
+                    <a href="/author/s/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">T Authors</h2>
+                    <hr class="letter-divider">
+                    <p class="no-authors">More authors coming soon.</p>
+                    <a href="/author/t/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">U Authors</h2>
+                    <hr class="letter-divider">
+                    <p class="no-authors">More authors coming soon.</p>
+                    <a href="/author/u/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">V Authors</h2>
+                    <hr class="letter-divider">
+                    <div class="author-list-links">
+                        <a href="/author/victor-frankl.html" class="author-card">Viktor Frankl</a>
+                    </div>
+                    <a href="/author/v/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">W Authors</h2>
+                    <hr class="letter-divider">
+                    <p class="no-authors">More authors coming soon.</p>
+                    <a href="/author/w/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">X Authors</h2>
+                    <hr class="letter-divider">
+                    <p class="no-authors">More authors coming soon.</p>
+                    <a href="/author/x/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">Y Authors</h2>
+                    <hr class="letter-divider">
+                    <p class="no-authors">More authors coming soon.</p>
+                    <a href="/author/y/index.html" class="more-btn">More</a>
+                </div>
+
+                <div class="letter-group">
+                    <h2 class="letter-heading">Z Authors</h2>
+                    <hr class="letter-divider">
+                    <p class="no-authors">More authors coming soon.</p>
+                    <a href="/author/z/index.html" class="more-btn">More</a>
+                </div>
+
             </div>
 			
     <section class="hashtag-cta">
         <p>Found a quote that speaks to you?<br>
         Download a beautifully styled quote card or create your own using our <a href="/quote-maker/index.html" target="_blank" target="_blank" rel="noopener" class="hashtag">Quote Image Generator</a> and share it on Instagram, Pinterest, or TikTok.<br>
         Share the timeless wisdom with the world and hope someone gets touched by it.<br>
-        Tag <a href="https://quotesthatmatter.com" target="_blank" rel="noopener" class="hashtag">#QuotesThatMatter</a> — let's make timeless wisdom trend.</p>
+        Tag <a href="quotesthatmatter.com" target="_blank" rel="noopener" class="hashtag">#QuotesThatMatter</a> — let's make timeless wisdom trend.</p>
     </section>
 	
         </main>
