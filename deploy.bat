@@ -18,7 +18,7 @@ if errorlevel 1 (
     echo Nothing to commit.
 ) else (
     echo Pushing to GitHub...
-    git push
+    git push --set-upstream origin main
 )
 
 echo.
